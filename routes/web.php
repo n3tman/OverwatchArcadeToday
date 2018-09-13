@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/login', 'Auth\LoginController@loginBlizzard');
+Route::get('/login/callback', 'Auth\LoginController@loginCallback');

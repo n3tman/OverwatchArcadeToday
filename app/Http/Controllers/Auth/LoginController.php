@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
@@ -46,6 +46,7 @@ class LoginController extends Controller
 
     public function loginCallback(Request $request)
     {
-        return dd($request->all());
+        $user = Socialite::driver('battlenet')->user();
+        return dd($user);
     }
 }
