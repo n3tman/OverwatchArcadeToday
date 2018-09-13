@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="200mm" height="120mm" version="1.1" viewBox="-60 -60 200 120" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="Template" fill="none" stroke-width=".05">
+  <g fill="#fff">
+   <path d="m-59.735-60.385 99.735 60.385-99.735 41.215z"/>
+   <path d="m140 40-100-40 101.15-60.122z"/>
+   <path d="m8 60 32-60 32 60z"/>
+   <path d="m8-60 32 60 32-60z"/>
+  </g>
+  <g fill="#afafaf">
+   <path d="m-60-60 100 60-32-60z"/>
+   <path d="m-60 60v-20l100-40-32 60z"/>
+   <path d="m140 60h-68l-32-60 100 40z"/>
+   <path d="m72-60-32 60 101.15-60.122z"/>
+  </g>
+  <path d="m-60-36 100 36-100-12z" fill="#c8c8c8"/>
+  <path d="m-60 12 100-12-100 28z" fill="#c8c8c8"/>
+  <path d="m140 12-100-12 100 28z" fill="#cbcbcb"/>
+  <g fill="#c8c8c8">
+   <path transform="matrix(.26458 0 0 .26458 -60 -60)" d="m755.91 90.709-377.95 136.06 377.95-45.354z"/>
+   <path d="m20 60 20-60-8 60z"/>
+   <path d="m48 60-8-60 20 60z"/>
+   <path d="m32-60 8 60-20-60z"/>
+   <path d="m48-60-8 60 20-60z"/>
+  </g>
+ </g>
+</svg>
