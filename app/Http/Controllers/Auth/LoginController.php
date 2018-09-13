@@ -41,12 +41,12 @@ class LoginController extends Controller
 
     public function loginBlizzard(Request $request)
     {
-        return Socialite::with('battlenet')->stateless()->redirect();
+        return Socialite::with('battlenet')->redirect();
     }
 
     public function loginCallback(Request $request)
     {
-        $user = Socialite::driver('battlenet')->user();
+        $user = Socialite::with('battlenet')->user();
         return dd($user);
     }
 }
