@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', 'Controller@index');
-
-Route::get('/gamemode', 'Controller@todaysGamemode');
-Route::post('/gamemode/submit', 'Controller@submitGamemode')->name('gamemode.submit');
-
+Route::get('/', 'Controller@index')->name('login');
 
 Route::get('/login', 'Auth\LoginController@loginBlizzard');
 Route::get('/login/callback', 'Auth\LoginController@loginCallback');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/gamemode', 'Controller@todaysGamemode');
+    Route::post('/gamemode/submit', 'Controller@submitGamemode')->name('gamemode.submit');
+
+});
