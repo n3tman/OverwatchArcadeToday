@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css?') }}?ver={{env('APP_VERSION')}}">
 </head>
 <body>
 <div class="overlay"></div>
@@ -144,7 +144,7 @@
     function about() {
         return swal({
             title: "About",
-            text: "This website has been made by bluedog and maintained by everyone listed here. Special thanks to KVKH for starting this idea.",
+            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to KVKH for starting this idea.",
             button: "Alright, neat!",
         });
     }
