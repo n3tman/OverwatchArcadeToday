@@ -57,14 +57,14 @@ class LoginController extends Controller
             $user = Socialite::with('battlenet')->user();
         }
 
-        $isWhitelisted = Whitelist::where('battletag', $user->user->id)->get()->count();
+        $isWhitelisted = Whitelist::where('battletag', $user->user['id'])->get()->count();
         if(!$isWhitelisted){
-            return abort('503', 'You are not whitelisted - #'.$user->user->id);
+            return abort('503', 'You are not whitelisted - #'.$user->user['id']);
         }
 
 
         $user = User::firstOrCreate(
-            ['id' => $user->user->id], ['battletag' => $user->user->battletag, 'group' => 0]
+            ['id' => $user->user['id']], ['battletag' => $user->user['battletag'], 'group' => 0]
         );
 
         Auth::login($user, true);
