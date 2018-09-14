@@ -14,6 +14,8 @@ class GamemodeTableSeeder extends Seeder
     {
         $json = File::get('database/data/gamemodes.json');
 
+        \App\Gamemode::truncate();
+
         foreach(json_decode($json, true) as $gamemode){
             $newGamemode = new \App\Gamemode();
             $newGamemode->fill($gamemode);

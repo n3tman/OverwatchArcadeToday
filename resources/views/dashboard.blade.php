@@ -16,6 +16,9 @@
 
 <div class="container arcade">
     <h1>Today's Overwatch Arcade</h1>
+    @if(!\App\Today::alreadyHaveGamemodeToday())
+        <h3><span class="badge badge-warning">WARNING</span> Today's arcade has not been updated yet</h3>
+    @endif
     <div class="row" style="">
         <div class="card col-md-6">
             <div class="card-img-top {{$today->getTile_1->code}} large">
@@ -92,17 +95,17 @@
     <div class="row mt-4">
         <div class="col-md-2">
             @if(Auth::check())
-            <span class="badge badge-warning">Logged in as: {{Auth::user()->battletag}}</span>
+                <span class="badge badge-warning">Logged in as: {{Auth::user()->battletag}}</span>
             @endif
-            <span class="badge badge-success"><i class="fa fa-clock-o"></i> {{\Carbon\Carbon::parse($today->created_at)->diffForHumans()}}</span>
-            <span class="badge badge-success">{{$today->getUser->battletag}}</span>
+            <span class="badge badge-success">Last updated: {{\Carbon\Carbon::parse($today->created_at)->diffForHumans()}}</span>
+            <span class="badge badge-success">Last updated by: {{$today->getUser->battletag}}</span>
         </div>
         <div class="col-md-6 offset-md-4 text-right">
             @if(Auth::check() && !\App\Today::alreadyHaveGamemodeToday())
                 <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set today's gamemodes</a>
             @endif
-                <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
-                <a href="javascript:contributors()" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
+            <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
+            <a href="javascript:contributors()" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
         </div>
     </div>
 </div>
@@ -110,15 +113,23 @@
 <div class="container contributors" style="display:none;">
     <table class="table table-hover table-striped">
         <thead>
+        <th style="width:10%;"></th>
         <th>Contributor</th>
         <th>Amounts of submits</th>
         </thead>
         <tbody>
         @foreach($contributors as $contributor)
-        <tr>
-            <td>{{$contributor->battletag}}</td>
-            <td>{{$contributor->contributions()}}</td>
-        </tr>
+            <tr>
+                <td>
+                    @if($contributor->avatar)
+                        <img src="{{$contributor->avatar}}" class="img" style="max-height:48px;">
+                    @endif
+                </td>
+                <td>
+                    {{$contributor->battletag}}
+                </td>
+                <td>{{$contributor->contributions()}}</td>
+            </tr>
         @endforeach
         </tbody>
     </table>

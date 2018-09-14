@@ -56,7 +56,7 @@ class LoginController extends Controller
         else {
             $user = Socialite::with('battlenet')->user();
         }
-        
+
         $isWhitelisted = Whitelist::where('battletag', $user->user->id)->get()->count();
         if(!$isWhitelisted){
             return abort('503', 'You are not whitelisted - #'.$user->user->id);

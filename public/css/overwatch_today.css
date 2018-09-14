@@ -45,6 +45,16 @@ h1 {
     margin: 0px -16px;
 }
 
+table {
+    background-color: #FFF;
+    color: #000;
+}
+
+td {
+    height:100%;
+    vertical-align: middle !important;
+}
+
 .card-body {
     background-color: #fdfdfd;
     margin: 0px -16px;
@@ -91,7 +101,7 @@ h1 {
 }
 
 .mystery {
-    background-color: purple;
+    background-color: #e2e545;
 }
 
 .lowgrav {
@@ -107,9 +117,21 @@ h1 {
 }
 
 .lockelim3 {
-    background-color: deepskyblue;
+    background-color: #35d022;
 }
 
 .lockelim6 {
-    background-color: royalblue;
+    background-color: #35d022;
+}
+
+.lowgravity {
+    background-color: #aa263c;
+}
+
+.busan {
+    background-color: orange;
+}
+
+.petradeathmatch {
+    background-color: lightblue;
 }

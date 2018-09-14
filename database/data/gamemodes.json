@@ -58,5 +58,10 @@
     "name": "Team Deathmatch",
     "players": "4v4",
     "code": "teamdeathmatch"
+  },
+  {
+    "name": "Mystery heroes",
+    "players": "6v6",
+    "code": "mystery"
   }
 ]

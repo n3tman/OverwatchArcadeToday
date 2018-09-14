@@ -15,6 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->string('id')->unique();
+            $table->string('avatar')->nullable()->default(NULL);
             $table->string('battletag');
             $table->integer('group');
             $table->rememberToken();

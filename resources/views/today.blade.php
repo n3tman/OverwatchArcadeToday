@@ -50,7 +50,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     {!! Form::label('tile_5', 'Tile right botom', ['class' => 'col-sm-12 control-label']); !!}
-                    {!! Form::select('tile_5', $gamemodes, '7', ['class' => 'selectpicker form-control', 'title' => 'Choose a gamemode', 'data-live-search' => 'true']); !!}
+                    {!! Form::select('tile_5', $gamemodes, '13', ['class' => 'selectpicker form-control', 'title' => 'Choose a gamemode', 'data-live-search' => 'true']); !!}
                 </div>
             </div>
         </div>
