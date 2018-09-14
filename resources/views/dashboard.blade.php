@@ -38,7 +38,7 @@
                 <div class="card col-md-6">
                     <div class="card-img-top {{$today->getTile_2->code}}">
                         <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/{{$today->getTile_2->code}}.png">
+                            <img src="/img/gamemodes/{{$today->getTile_2->code}}.png" class="small-image">
                         </div>
                     </div>
                     <div class="card-body">
@@ -51,7 +51,7 @@
                 <div class="card col-md-6">
                     <div class="card-img-top {{$today->getTile_3->code}}">
                         <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/{{$today->getTile_3->code}}.png">
+                            <img src="/img/gamemodes/{{$today->getTile_3->code}}.png" class="small-image">
                         </div>
                     </div>
                     <div class="card-body">
@@ -66,7 +66,7 @@
                 <div class="card col-md-6">
                     <div class="card-img-top {{$today->getTile_4->code}}">
                         <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/{{$today->getTile_4->code}}.png">
+                            <img src="/img/gamemodes/{{$today->getTile_4->code}}.png" class="small-image">
                         </div>
                     </div>
                     <div class="card-body">
@@ -79,7 +79,7 @@
                 <div class="card col-md-6">
                     <div class="card-img-top {{$today->getTile_5->code}}">
                         <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/{{$today->getTile_5->code}}.png">
+                            <img src="/img/gamemodes/{{$today->getTile_5->code}}.png" class="small-image">
                         </div>
                     </div>
                     <div class="card-body">

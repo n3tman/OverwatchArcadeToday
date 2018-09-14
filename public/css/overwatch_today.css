@@ -51,7 +51,7 @@ table {
 }
 
 td {
-    height:100%;
+    height: 100%;
     vertical-align: middle !important;
 }
 
@@ -69,7 +69,12 @@ td {
 }
 
 .large-image {
-    margin-top: 100px;
+    margin-top: 40px;
+    max-height: 270px;
+}
+
+.small-image {
+    max-height: 140px;
 }
 
 .deathmatch {
