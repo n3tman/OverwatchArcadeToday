@@ -15,6 +15,12 @@ class CreateTodaysTable extends Migration
     {
         Schema::create('todays', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('tile_1');
+            $table->integer('tile_2');
+            $table->integer('tile_3');
+            $table->integer('tile_4');
+            $table->integer('tile_5');
+            $table->string('created_by');
             $table->timestamps();
         });
     }

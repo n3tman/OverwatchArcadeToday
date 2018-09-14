@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGamemodesTable extends Migration
+class CreateWhitelistsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateGamemodesTable extends Migration
      */
     public function up()
     {
-        Schema::create('gamemodes', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('players');
-            $table->string('code');
+        Schema::create('user_whitelist', function (Blueprint $table) {
+            $table->string('battletag')->unique();
+            $table->string('whitelisted_by');
             $table->timestamps();
+            $table->primary('battletag');
         });
     }
 
@@ -29,6 +28,6 @@ class CreateGamemodesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gamemodes');
+        Schema::dropIfExists('user_whitelist');
     }
 }

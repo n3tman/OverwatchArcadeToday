@@ -7,187 +7,122 @@
 
     <title>{{env('APP_NAME')}}</title>
 
-    <link rel="stylesheet" href="{{ URL::asset('/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <style>
-        body {
-            background: url('/img/wallpaper.jpg') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-
-        .overlay {
-            height: 100%;
-            width: 100%;
-            display: block;
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-        }
-
-        hr {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-
-        h1 {
-            color: #FFF;
-            font-size: 48px;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-style: italic;
-        }
-
-        .container {
-            padding-top: 250px;
-        }
-
-        .card {
-            border: 3px solid rgba(255, 255, 255, 0);
-            background: none;
-        }
-
-        .card-img-top {
-            background: url('/img/bg.svg');
-            height: 130px;
-            background-size: contain;
-            background-blend-mode: multiply;
-            background-size: cover;
-            margin: 0px -16px;
-        }
-
-        .card-body {
-            background-color: #fdfdfd;
-            margin: 0px -16px;
-        }
-
-        .text-wrap {
-            padding: 0px 20px;
-        }
-
-        .large {
-            height: 332px;
-        }
-
-        .large-image {
-            margin-top: 100px;
-        }
-
-        .deathmatch {
-            background-color: red;
-        }
-
-        .gamemode-icon {
-            margin: 0px auto;
-        }
-
-        .players {
-            color: #3c3cea;
-            margin-top: 10px;
-            font-style: italic;
-        }
-
-        .gamemode-title {
-            margin-top: -5px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            font-style: italic;
-            font-weight: 700;
-            letter-spacing: -1px;
-            color: #404040;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css') }}">
 </head>
 <body>
 <div class="overlay"></div>
 
-<div class="container">
+<div class="container arcade">
     <h1>Today's Overwatch Arcade</h1>
     <div class="row" style="">
         <div class="card col-md-6">
-            <div class="card-img-top deathmatch large">
+            <div class="card-img-top {{$today->getTile_1->code}} large">
                 <div class="gamemode-icon text-center">
-                    <img src="/img/gamemodes/deathmatch.png" class="large-image">
+                    <img src="/img/gamemodes/{{$today->getTile_1->code}}.png" class="large-image">
                 </div>
             </div>
             <div class="card-body">
                 <div class="text-wrap">
-                    <h6 class="players">8 PLAYER FFA</h6>
-                    <h4 class="gamemode-title">Gamemode title</h4>
+                    <h6 class="players">{{$today->getTile_1->players}}</h6>
+                    <h4 class="gamemode-title">{{$today->getTile_1->name}}</h4>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
             <div class="row">
                 <div class="card col-md-6">
-                    <div class="card-img-top deathmatch">
+                    <div class="card-img-top {{$today->getTile_2->code}}">
                         <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/deathmatch.png">
+                            <img src="/img/gamemodes/{{$today->getTile_2->code}}.png">
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="text-wrap">
-                            <h6 class="players">8 PLAYER FFA</h6>
-                            <h4 class="gamemode-title">Gamemode title</h4>
+                            <h6 class="players">{{$today->getTile_2->players}}</h6>
+                            <h4 class="gamemode-title">{{$today->getTile_2->name}}</h4>
                         </div>
                     </div>
                 </div>
                 <div class="card col-md-6">
-                    <div class="card-img-top deathmatch">
+                    <div class="card-img-top {{$today->getTile_3->code}}">
                         <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/deathmatch.png">
+                            <img src="/img/gamemodes/{{$today->getTile_3->code}}.png">
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="text-wrap">
-                            <h6 class="players">8 PLAYER FFA</h6>
-                            <h4 class="gamemode-title">Gamemode title</h4>
+                            <h6 class="players">{{$today->getTile_3->players}}</h6>
+                            <h4 class="gamemode-title">{{$today->getTile_3->name}}</h4>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="card col-md-6">
-                    <div class="card-img-top deathmatch">
+                    <div class="card-img-top {{$today->getTile_4->code}}">
                         <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/deathmatch.png">
+                            <img src="/img/gamemodes/{{$today->getTile_4->code}}.png">
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="text-wrap">
-                            <h6 class="players">8 PLAYER FFA</h6>
-                            <h4 class="gamemode-title">Gamemode title</h4>
+                            <h6 class="players">{{$today->getTile_4->players}}</h6>
+                            <h4 class="gamemode-title">{{$today->getTile_4->name}}</h4>
                         </div>
                     </div>
                 </div>
                 <div class="card col-md-6">
-                    <div class="card-img-top deathmatch">
+                    <div class="card-img-top {{$today->getTile_5->code}}">
                         <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/deathmatch.png">
+                            <img src="/img/gamemodes/{{$today->getTile_5->code}}.png">
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="text-wrap">
-                            <h6 class="players">8 PLAYER FFA</h6>
-                            <h4 class="gamemode-title">Gamemode title</h4>
+                            <h6 class="players">{{$today->getTile_5->players}}</h6>
+                            <h4 class="gamemode-title">{{$today->getTile_5->name}}</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <hr/>
-            <span class="badge badge-success"><i class="fa fa-clock-o"></i> Updated 2h 30m ago</span>
-            <span class="badge badge-success">JohnDoe#2991</span>
-
-            <div class="float-right">
+    <div class="row mt-4">
+        <div class="col-md-2">
+            @if(Auth::check())
+            <span class="badge badge-warning">Logged in as: {{Auth::user()->battletag}}</span>
+            @endif
+            <span class="badge badge-success"><i class="fa fa-clock-o"></i> {{\Carbon\Carbon::parse($today->created_at)->diffForHumans()}}</span>
+            <span class="badge badge-success">{{$today->getUser->battletag}}</span>
+        </div>
+        <div class="col-md-6 offset-md-4 text-right">
+            @if(Auth::check() && !\App\Today::alreadyHaveGamemodeToday())
+                <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set today's gamemodes</a>
+            @endif
                 <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
-                <a href="javascript:about()" class="btn btn-info"><i class="fa fa-pencil"></i> Become a maintainer</a>
-            </div>
+                <a href="javascript:contributors()" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
         </div>
     </div>
+</div>
+
+<div class="container contributors" style="display:none;">
+    <table class="table table-hover table-striped">
+        <thead>
+        <th>Contributor</th>
+        <th>Amounts of submits</th>
+        </thead>
+        <tbody>
+        @foreach($contributors as $contributor)
+        <tr>
+            <td>{{$contributor->battletag}}</td>
+            <td>{{$contributor->contributions()}}</td>
+        </tr>
+        @endforeach
+        </tbody>
+    </table>
+    <a href="javascript:back()" class="btn btn-primary">Back</a>
 </div>
 </body>
 <script src="{{ URL::asset('/js/jquery.min.js') }}"></script>
@@ -198,9 +133,19 @@
     function about() {
         return swal({
             title: "About",
-            text: "This website has been made by bluedog and maintained by everyone listed here. Special thanks to KVKH for XYZ",
+            text: "This website has been made by bluedog and maintained by everyone listed here. Special thanks to KVKH for starting this idea.",
             button: "Alright, neat!",
         });
+    }
+
+    function contributors() {
+        $(".arcade").fadeOut(250);
+        $(".contributors").delay(250).fadeIn(250);
+    }
+
+    function back() {
+        $(".container").fadeOut(250);
+        $(".arcade").delay(250).fadeIn(250);
     }
 </script>
 </html>

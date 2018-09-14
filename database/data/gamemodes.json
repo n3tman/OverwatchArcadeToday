@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Elimination",
+    "players": "3v3",
+    "code": "elim3"
+  },
+  {
+    "name": "Mystery Duel",
+    "players": "1v1",
+    "code": "mystery"
+  },
+  {
+    "name": "All Brawls!",
+    "players": "-",
+    "code": "brawls"
+  },
+  {
+    "name": "No Limits",
+    "players": "6v6",
+    "code": "nolimits"
+  },
+  {
+    "name": "Capture the Flag",
+    "players": "6v6",
+    "code": "ctf"
+  },
+  {
+    "name": "Lockout Elimination",
+    "players": "3v3",
+    "code": "lockelim3"
+  },
+  {
+    "name": "Limited Duel",
+    "players": "1v1",
+    "code": "limitedduel"
+  },
+  {
+    "name": "Total Mayhem",
+    "players": "6v6",
+    "code": "totalmayhem"
+  },
+  {
+    "name": "Lockout Elimination",
+    "players": "6v6",
+    "code": "lockelim"
+  },
+  {
+    "name": "Low Gravity",
+    "players": "6v6",
+    "code": "lowgravity"
+  },
+  {
+    "name": "Deathmatch",
+    "players": "8ffa",
+    "code": "deathmatch"
+  },
+  {
+    "name": "Team Deathmatch",
+    "players": "4v4",
+    "code": "teamdeathmatch"
+  }
+]
