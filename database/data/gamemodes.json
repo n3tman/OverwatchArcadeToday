@@ -7,7 +7,7 @@
   {
     "name": "Mystery Duel",
     "players": "1v1",
-    "code": "mystery"
+    "code": "mystery_duel"
   },
   {
     "name": "All Brawls!",
@@ -63,5 +63,16 @@
     "name": "Mystery heroes",
     "players": "6v6",
     "code": "mystery"
+  },
+  {
+    "name": "Busan",
+    "players": "6v6",
+    "code": "busan"
+  },
+  {
+    "name": "Petra Deathmatch",
+    "players": "8p FFA",
+    "code": "petradeathmatch"
   }
+
 ]

@@ -22,20 +22,20 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                {!! Form::label('tile_1', 'Large tile', ['class' => 'col-sm-12 control-label']); !!}
+                {!! Form::label('tile_1', 'Large 1', ['class' => 'col-sm-12 control-label']); !!}
                 {!! Form::select('tile_1', $gamemodes, '', ['class' => 'selectpicker form-control', 'title' => 'Choose a gamemode', 'data-live-search' => 'true']); !!}
             </div>
         </div>
         <div class="col-md-3">
             <div class="col-md-12">
                 <div class="form-group">
-                    {!! Form::label('tile_2', 'Tile left upper', ['class' => 'col-sm-12 control-label']); !!}
+                    {!! Form::label('tile_2', 'Tile 2', ['class' => 'col-sm-12 control-label']); !!}
                     {!! Form::select('tile_2', $gamemodes, '', ['class' => 'selectpicker form-control', 'title' => 'Choose a gamemode', 'data-live-search' => 'true']); !!}
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    {!! Form::label('tile_3', 'Tile right upper', ['class' => 'col-sm-12 control-label']); !!}
+                    {!! Form::label('tile_3', 'Tile 3', ['class' => 'col-sm-12 control-label']); !!}
                     {!! Form::select('tile_3', $gamemodes, '', ['class' => 'selectpicker form-control', 'title' => 'Choose a gamemode', 'data-live-search' => 'true']); !!}
                 </div>
             </div>
@@ -43,13 +43,13 @@
         <div class="col-md-3">
             <div class="col-md-12">
                 <div class="form-group">
-                    {!! Form::label('tile_4', 'Tile left bottom', ['class' => 'col-sm-12 control-label']); !!}
+                    {!! Form::label('tile_4', 'Tile 4', ['class' => 'col-sm-12 control-label']); !!}
                     {!! Form::select('tile_4', $gamemodes, '', ['class' => 'selectpicker form-control', 'title' => 'Choose a gamemode', 'data-live-search' => 'true']); !!}
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    {!! Form::label('tile_5', 'Tile right botom', ['class' => 'col-sm-12 control-label']); !!}
+                    {!! Form::label('tile_5', 'Tile 5', ['class' => 'col-sm-12 control-label']); !!}
                     {!! Form::select('tile_5', $gamemodes, '13', ['class' => 'selectpicker form-control', 'title' => 'Choose a gamemode', 'data-live-search' => 'true']); !!}
                 </div>
             </div>

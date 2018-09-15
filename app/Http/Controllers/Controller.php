@@ -23,8 +23,13 @@ class Controller extends BaseController
             abort('503', 'We already have a picks for today');
         }
 
-        $gamemodes = Gamemode::all()->pluck('name', 'id')->toArray();
-        return view('today', ['gamemodes' => $gamemodes]);
+        $gamemodes = Gamemode::all();
+        $selectedGamemodes = [];
+        foreach ($gamemodes as $gamemode) {
+            $selectedGamemodes[$gamemode->id]= $gamemode->name. " (".$gamemode->players.")";
+        }
+
+        return view('today', ['gamemodes' => $selectedGamemodes]);
     }
 
     public function submitGamemode(\App\Http\Requests\Gamemode $request)
@@ -44,7 +49,7 @@ class Controller extends BaseController
 
     public function index()
     {
-        $today = Today::all()->first();
+        $today = Today::orderBy('id', 'desc')->first();
         $contributors = User::all()->sortByDesc(function ($user) {
             return $user->contributions();
         });

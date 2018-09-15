@@ -135,6 +135,10 @@
     </table>
     <a href="javascript:back()" class="btn btn-primary">Back</a>
 </div>
+<p class="footer">
+    Game content and materials are trademarks and copyrights of their respective publisher and its licensors. All rights reserved.<br />
+    This site is made for fun by <a href="//bluedog.pw">bluedog</a>
+</p>
 </body>
 <script src="{{ URL::asset('/js/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('/js/bootstrap.min.js') }}"></script>

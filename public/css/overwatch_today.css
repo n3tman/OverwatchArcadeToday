@@ -78,7 +78,7 @@ td {
 }
 
 .deathmatch {
-    background-color: red;
+    background-color: #0000FF;
 }
 
 .gamemode-icon {
@@ -101,24 +101,34 @@ td {
     color: #404040;
 }
 
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.footer a { font-weight:700; color:#FFF; }
+
 .nolimits {
-    background-color: yellow;
+    background-color: #9932CC;
 }
 
 .mystery {
-    background-color: #e2e545;
+    background-color: #DAA520;
+}
+
+.mystery_duel {
+    background-color: #5c3fff;
 }
 
 .lowgrav {
     background-color: orange;
 }
 
-.deathmatch {
-    background-color: dodgerblue;
-}
-
 .totalmayhem {
-    background-color: darkorange;
+    background-color: #FFD700;
 }
 
 .lockelim3 {
@@ -129,14 +139,26 @@ td {
     background-color: #35d022;
 }
 
+.elim3 {
+    background-color: #35d022;
+}
+
 .lowgravity {
-    background-color: #aa263c;
+    background-color: #FA8072;
 }
 
 .busan {
     background-color: orange;
 }
 
+.teamdeathmatch {
+    background-color:#DC143C;
+}
+
 .petradeathmatch {
-    background-color: lightblue;
+    background-color: #00FFFF;
+}
+
+.chateaudeathmatch {
+    background-color: #9932CC;
 }
