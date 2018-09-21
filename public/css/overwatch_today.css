@@ -102,11 +102,10 @@ td {
 }
 
 .footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    margin-top:150px;
+    color:#FFF;
     text-align: center;
+    position: relative;
 }
 
 .footer a { font-weight:700; color:#FFF; }

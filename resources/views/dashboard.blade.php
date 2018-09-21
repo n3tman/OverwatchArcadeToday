@@ -19,7 +19,7 @@
     @if(!\App\Today::alreadyHaveGamemodeToday())
         <h3><span class="badge badge-warning">WARNING</span> Today's arcade has not been updated yet</h3>
     @endif
-    <div class="row" style="">
+    <div class="row mt-4" style="">
         <div class="card col-md-6">
             <div class="card-img-top {{$today->getTile_1->code}} large">
                 <div class="gamemode-icon text-center">
@@ -93,14 +93,14 @@
         </div>
     </div>
     <div class="row mt-4">
-        <div class="col-md-2">
+        <div class="col-lg-2 col-md-12 col-sm-12 text-md-center text-sm-center text-lg-left">
             @if(Auth::check())
                 <span class="badge badge-warning">Logged in as: {{Auth::user()->battletag}}</span>
             @endif
             <span class="badge badge-success">Last updated: {{\Carbon\Carbon::parse($today->created_at)->diffForHumans()}}</span>
             <span class="badge badge-success">Last updated by: {{$today->getUser->battletag}}</span>
         </div>
-        <div class="col-md-6 offset-md-4 text-right">
+        <div class="col-lg-7 offset-lg-3 col-md-12 mt-sm-4 text-right">
             @if(Auth::check() && !\App\Today::alreadyHaveGamemodeToday())
                 <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set today's gamemodes</a>
             @endif
@@ -148,7 +148,7 @@
     function about() {
         return swal({
             title: "About",
-            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to KVKH for starting this idea.",
+            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to Superbu for starting this idea.",
             button: "Alright, neat!",
         });
     }
