@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css?') }}?ver={{env('APP_VERSION')}}">
 </head>
 <body>
-<div class="overlay"></div>
-
 <div class="container arcade">
     <h1>Today's Overwatch Arcade</h1>
     @if(!\App\Today::alreadyHaveGamemodeToday())
@@ -108,6 +106,12 @@
             <a href="javascript:contributors()" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
         </div>
     </div>
+    <div class="row mt-4">
+        <p class="footer">
+            Game content and materials are trademarks and copyrights of their respective publisher and its licensors. All rights reserved.<br />
+            This site is made for fun by <a href="//bluedog.pw">bluedog</a>
+        </p>
+    </div>
 </div>
 
 <div class="container contributors" style="display:none;">
@@ -135,10 +139,6 @@
     </table>
     <a href="javascript:back()" class="btn btn-primary">Back</a>
 </div>
-<p class="footer">
-    Game content and materials are trademarks and copyrights of their respective publisher and its licensors. All rights reserved.<br />
-    This site is made for fun by <a href="//bluedog.pw">bluedog</a>
-</p>
 </body>
 <script src="{{ URL::asset('/js/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('/js/bootstrap.min.js') }}"></script>
@@ -148,7 +148,7 @@
     function about() {
         return swal({
             title: "About",
-            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to Superbu for starting this idea.",
+            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to Superbunny for starting this idea.",
             button: "Alright, neat!",
         });
     }

@@ -1,5 +1,5 @@
 body {
-    background: url('/img/wallpaper.jpg') no-repeat center center fixed;
+    background: url('https://www.owfire.com/images/maps/kings-row-1.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -102,8 +102,8 @@ td {
 }
 
 .footer {
-    margin-top:150px;
     color:#FFF;
+    width:100%;
     text-align: center;
     position: relative;
 }

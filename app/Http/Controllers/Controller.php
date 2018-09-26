@@ -22,7 +22,7 @@ class Controller extends BaseController
         if (Today::alreadyHaveGamemodeToday()) {
             abort('503', 'We already have a picks for today');
         }
-
+        
         $gamemodes = Gamemode::all();
         $selectedGamemodes = [];
         foreach ($gamemodes as $gamemode) {
