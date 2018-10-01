@@ -104,6 +104,7 @@
                 <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set today's gamemodes</a>
             @endif
             <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
+            <a href="javascript:plans()" class="btn btn-warning"><i class="fa fa-globe"></i> Future plans</a>
             <a href="javascript:contributors()" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
         </div>
     </div>
@@ -140,6 +141,20 @@
     </table>
     <a href="javascript:back()" class="btn btn-primary">Back</a>
 </div>
+
+<div class="container plans" style="display:none;">
+    <h1>Future plans</h1>
+    <p>We enjoy arcade gamemodes as much as you do. To make this site as useful as we can, I have a couple of features in mind that might be useful.</p>
+    <p>If you'd like to see this features implemented or have any other cool stuff in mind, please leave your thoughts at <a href="https://us.forums.blizzard.com/en/overwatch/t/wiki-what-arcade-modes-are-available-today/391">https://us.forums.blizzard.com/en/overwatch/t/wiki-what-arcade-modes-are-available-today/391</a></a> </p>
+    <hr/>
+    <h4>Features I had in mind</h4>
+    <ul>
+        <li>Push web/mobile notification when your favourite arcade mode is available</li>
+        <li>Automated Twitter posting</li>
+    </ul>
+    <a href="javascript:back()" class="btn btn-primary">Back</a>
+</div>
+
 </body>
 <script src="{{ URL::asset('/js/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('/js/bootstrap.min.js') }}"></script>
@@ -152,6 +167,11 @@
             text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to Superbunny for starting this idea.",
             button: "Alright, neat!",
         });
+    }
+
+    function plans() {
+        $(".arcade").fadeOut(250);
+        $(".plans").delay(250).fadeIn(250);
     }
 
     function contributors() {
