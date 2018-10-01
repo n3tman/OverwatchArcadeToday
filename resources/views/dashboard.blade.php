@@ -8,6 +8,7 @@
     <title>{{env('APP_NAME')}}</title>
 
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css?') }}?ver={{env('APP_VERSION')}}">
 </head>
