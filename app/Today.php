@@ -26,32 +26,32 @@ class Today extends Model
 
     // Relations
 
-    public function getTile_1()
+    public function tile_large()
     {
         return $this->hasOne('App\Gamemode', 'id', 'tile_1');
     }
 
-    public function getTile_2()
+    public function tile_weekly_1()
     {
         return $this->hasOne('App\Gamemode', 'id', 'tile_2');
     }
 
-    public function getTile_3()
+    public function tile_daily()
     {
         return $this->hasOne('App\Gamemode', 'id', 'tile_3');
     }
 
-    public function getTile_4()
+    public function tile_weekly_2()
     {
         return $this->hasOne('App\Gamemode', 'id', 'tile_4');
     }
 
-    public function getTile_5()
+    public function tile_permanent()
     {
         return $this->hasOne('App\Gamemode', 'id', 'tile_5');
     }
 
-    public function getUser()
+    public function byUser()
     {
         return $this->hasOne('App\User', 'id', 'created_by');
     }

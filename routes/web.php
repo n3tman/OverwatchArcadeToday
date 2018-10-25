@@ -12,12 +12,15 @@
 */
 
 Route::get('/', 'Controller@index')->name('login');
+Route::view('api', 'api');
 
 Route::get('/login', 'Auth\LoginController@loginBlizzard');
 Route::get('/login/callback', 'Auth\LoginController@loginCallback');
 
+Route::get('/api/today', 'RestApiController@getTodaysGamemodes');
+Route::get('/api/week', 'RestApiController@thisWeeksGamemodes');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/gamemode', 'Controller@todaysGamemode');
     Route::post('/gamemode/submit', 'Controller@submitGamemode')->name('gamemode.submit');
-
 });
