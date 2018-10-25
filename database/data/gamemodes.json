@@ -73,6 +73,26 @@
     "name": "Petra Deathmatch",
     "players": "8p FFA",
     "code": "petradeathmatch"
+  },
+  {
+    "name": "Mystery Deathmatch",
+    "players": "8p FFA",
+    "code": "mystery"
+  },
+  {
+    "name": "Chateau Deathmatch",
+    "players": "8p FFA",
+    "code": "deathmatch"
+  },
+  {
+    "name": "Junkenstein's Revenge",
+    "players": "CO-OP",
+    "code": "junkensteinrevenge"
+  },
+  {
+    "name": "Junkenstein Endless",
+    "players": "CO-OP",
+    "code": "junkensteinendless"
   }
 
 ]
