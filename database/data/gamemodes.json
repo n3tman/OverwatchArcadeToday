@@ -101,11 +101,11 @@
   },
   {
     "name": "Yeti Hunt",
-    "players": "6v1",
+    "players": "5v1",
     "code": "yetihunt"
   },
   {
-    "name": "Showball",
+    "name": "Mei's snowball offensive",
     "players": "6v6",
     "code": "snowball"
   }
