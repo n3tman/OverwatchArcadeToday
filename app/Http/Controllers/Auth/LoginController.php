@@ -49,13 +49,7 @@ class LoginController extends Controller
 
     public function loginCallback(Request $request)
     {
-        if(env('APP_ENV') == "local"){
-            $user = json_decode('{"accessTokenResponseBody":{"access_token":"f893wbfmuxvvypjverzyhg9j","token_type":"bearer","expires_in":2591999},"token":"f893wbfmuxvvypjverzyhg9j","refreshToken":null,"expiresIn":2591999,"id":120653162,"nickname":"bluedog#21410","name":null,"email":null,"avatar":null,"user":{"battletag":"bluedog#21410","id":120653162}}',
-                false);
-        }
-        else {
-            $user = Socialite::with('battlenet')->user();
-        }
+        $user = Socialite::with('battlenet')->user();
 
         $isWhitelisted = Whitelist::where('battletag', $user->user['id'])->get()->count();
         if(!$isWhitelisted){

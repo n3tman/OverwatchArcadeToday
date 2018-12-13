@@ -5,6 +5,11 @@
     "code": "elim3"
   },
   {
+    "name": "Elimination",
+    "players": "6v6",
+    "code": "elim6"
+  },
+  {
     "name": "Mystery Duel",
     "players": "1v1",
     "code": "mystery_duel"
@@ -93,6 +98,16 @@
     "name": "Junkenstein Endless",
     "players": "CO-OP",
     "code": "junkensteinendless"
+  },
+  {
+    "name": "Yeti Hunt",
+    "players": "6v1",
+    "code": "yetihunt"
+  },
+  {
+    "name": "Showball",
+    "players": "6v6",
+    "code": "snowball"
   }
 
 ]
