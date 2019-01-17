@@ -23,7 +23,6 @@ class Today extends Model
         return false;
     }
 
-
     // Relations
 
     public function tile_large()

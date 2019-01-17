@@ -12,7 +12,7 @@ class GamemodeTableSeeder extends Seeder
      */
     public function run()
     {
-        $json = File::get('database/data/gamemodes.json');
+        $json = File::get('database/data/gamemodes-spreadsheet.json');
 
         \App\Gamemode::truncate();
 

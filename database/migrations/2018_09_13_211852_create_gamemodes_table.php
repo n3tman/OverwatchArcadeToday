@@ -18,7 +18,6 @@ class CreateGamemodesTable extends Migration
             $table->string('name');
             $table->string('players');
             $table->string('code');
-            $table->timestamps();
         });
     }
 
