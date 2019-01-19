@@ -14,7 +14,10 @@ class Today extends Model
         $lastGamemode = Today::select('created_at')->orderBy('created_at', 'desc')->first();
         $lastGamemode = Carbon::parse($lastGamemode->created_at);
 
-        if (Carbon::now() > Carbon::now()->addHour(1)) {
+        $now = Carbon::now();
+        $resetTime = Carbon::create($now->year, $now->month, $now->day, "1");
+
+        if ($lastGamemode > $resetTime) {
             return true;
         }
         return false;
