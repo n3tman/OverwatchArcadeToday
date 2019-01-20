@@ -35,17 +35,20 @@
         <th>Name</th>
         <th>URL</th>
         <th>Method</th>
+        <th>Notes</th>
         </thead>
         <tbody>
             <tr>
                 <td>Today's gamemode</td>
                 <td>/api/today</td>
                 <td>get</td>
+                <td>Returns empty json array when there's no today's gamemode set yet</td>
             </tr>
             <tr>
                 <td>This week's gamemodes</td>
                 <td>/api/week</td>
                 <td>get</td>
+                <td>-</td>
             </tr>
         </tbody>
     </table>
