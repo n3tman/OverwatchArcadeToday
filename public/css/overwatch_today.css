@@ -31,7 +31,7 @@ h1 {
     padding-top: 150px;
 }
 
-.card {
+.arcade .card {
     border: 3px solid rgba(255, 255, 255, 0);
     background: none;
 }
@@ -43,7 +43,7 @@ h1 {
     top:10px;
 }
 
-.card-img-top {
+.arcade .card-img-top {
     background: url('/img/bg.svg');
     height: 130px;
     background-size: contain;
@@ -62,7 +62,7 @@ td {
     vertical-align: middle !important;
 }
 
-.card-body {
+.arcade .card-body {
     background-color: #fdfdfd;
     margin: 0px -16px;
 }
@@ -71,22 +71,19 @@ td {
     padding: 0px 20px;
 }
 
-.large {
+.arcade .large {
     height: 332px;
 }
 
-.large-image {
+.arcade .large-image {
     margin-top: 40px;
     max-height: 270px;
 }
 
-.small-image {
+.arcade .small-image {
     max-height: 140px;
 }
 
-.deathmatch {
-    background-color: #0000FF;
-}
 
 .gamemode-icon {
     margin: 0px auto;
@@ -108,6 +105,11 @@ td {
     color: #404040;
 }
 
+.contributor-card { margin: 0px 10px;}
+.contributor-card h6, .contributor-card h4 { padding: 0px 10px;}
+.contributor-card h4 { font-size: 18px; }
+.contributor-card img { height:auto; width: 100%;}
+
 .footer {
     color:#FFF;
     width:100%;
@@ -116,63 +118,3 @@ td {
 }
 
 .footer a { font-weight:700; color:#FFF; }
-
-.nolimits {
-    background-color: #9932CC;
-}
-
-.mystery {
-    background-color: #DAA520;
-}
-
-.mystery_duel {
-    background-color: #5c3fff;
-}
-
-.lowgrav {
-    background-color: orange;
-}
-
-.totalmayhem {
-    background-color: #FFD700;
-}
-
-.lockelim3 {
-    background-color: #35d022;
-}
-
-.lockelim6 {
-    background-color: #35d022;
-}
-
-.elim3 {
-    background-color: #35d022;
-}
-
-.lowgravity {
-    background-color: #FA8072;
-}
-
-.busan {
-    background-color: orange;
-}
-
-.teamdeathmatch {
-    background-color:#DC143C;
-}
-
-.petradeathmatch {
-    background-color: #00FFFF;
-}
-
-.chateaudeathmatch {
-    background-color: #9826ad;
-}
-
-.junkensteinrevenge {
-    background-color: #5f6a7d;
-}
-
-.junkensteinendless {
-    background-color: #6f6262;
-}

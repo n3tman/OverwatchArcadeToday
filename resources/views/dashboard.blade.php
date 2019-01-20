@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css?') }}?ver={{env('APP_VERSION')}}">
-    <link rel="stylesheet" href="{{ URL::asset('css/gamemodes.css?') }}?ver={{env('APP_VERSION')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css') }}?ver={{env('APP_VERSION')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/gamemodes.css') }}?ver={{env('APP_VERSION')}}">
 </head>
 <body>
 <div class="container arcade">
@@ -134,29 +134,21 @@
 </div>
 
 <div class="container contributors" style="display:none;">
-    <table class="table table-hover table-striped">
-        <thead>
-        <th style="width:10%;"></th>
-        <th>Contributor</th>
-        <th>Amounts of submits</th>
-        </thead>
-        <tbody>
-        @foreach($contributors as $contributor)
-            <tr>
-                <td>
-                    @if($contributor->avatar)
-                        <img src="{{$contributor->avatar}}" class="img" style="max-height:48px;">
-                    @endif
-                </td>
-                <td>
-                    {{$contributor->battletag}}
-                </td>
-                <td>{{$contributor->contributions()}}</td>
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
-    <a href="javascript:back()" class="btn btn-primary">Back</a>
+    <h1 class="mb-4">Contributors</h1>
+    @foreach($contributors->chunk(6) as $contributorRow)
+        <div class="row">
+            @foreach($contributorRow as $contributor)
+                <div class="card contributor-card" style="width: 12rem;">
+                    <img class="card-img-top" src="{{$contributor->avatar}}">
+                    <div class="card-body">
+                        <h6 class="players">{{$contributor->contributions()}} contribution(s)</h6>
+                        <h4 class="gamemode-title">{{$contributor->battletag}}</h4>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endforeach
+    <a href="javascript:back()" class="btn btn-primary mt-4">Back</a>
 </div>
 
 

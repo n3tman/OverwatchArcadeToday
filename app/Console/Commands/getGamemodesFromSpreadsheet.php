@@ -46,7 +46,7 @@ class getGamemodesFromSpreadsheet extends Command
         $client->setDeveloperKey(env('GOOGLESHEETS_APIKEY'));
         $service = new Google_Service_Sheets($client);
 
-        $range = "Gamemodes!A2:D";
+        $range = "Gamemodes!A3:D";
         $response = $service->spreadsheets_values->get($this->spreadsheetId, $range);
         $gamemodes = [];
         $cssEntry = "";
@@ -54,7 +54,7 @@ class getGamemodesFromSpreadsheet extends Command
         // Gamemodes info
         foreach($response as $gamemode){
             $gamemodes[] = ["name" => $gamemode[0], "players" => $gamemode[1], "code" => strtolower(str_replace([" ", "’", "'", "-"], "", $gamemode[0]))];
-            $cssClass = ".".strtolower(str_replace([" ", "’", "'", "-"], "", $gamemode[0]))." { background-color: ".$gamemode[2]."; }";
+            $cssClass = ".".strtolower(str_replace([" ", "’", "'", "-"], "", $gamemode[0]))." { background-color: ".$gamemode[2]." !important; }";
             if(is_numeric($cssClass[1])){
                 $cssClass = substr_replace($cssClass, "\\".(bin2hex($cssClass[1])." "), 1, 1);
             }

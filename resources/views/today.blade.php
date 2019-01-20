@@ -12,14 +12,14 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"
           integrity="sha256-sJQnfQcpMXjRFWGNJ9/BWB1l6q7bkQYsRqToxoHlNJY=" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css?') }}?ver={{env('APP_VERSION')}}">
-    <link rel="stylesheet" href="{{ URL::asset('css/gamemodes.css?') }}?ver={{env('APP_VERSION')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css') }}?ver={{env('APP_VERSION')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/gamemodes.css') }}?ver={{env('APP_VERSION')}}">
 
 </head>
 <body>
 <div class="overlay"></div>
 
-<div class="container">
+<div class="container arcade">
     <h1>Pick Today's gamemodes</h1>
 
     {!! Form::open(['route' => 'gamemode.submit', 'style' => 'width:100%;']) !!}
