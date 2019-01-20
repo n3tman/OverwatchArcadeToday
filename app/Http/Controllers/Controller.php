@@ -29,7 +29,7 @@ class Controller extends BaseController
             $selectedGamemodes[$gamemode->id]= $gamemode->name. " (".$gamemode->players.")";
         }
 
-        return view('today', ['gamemodes' => $selectedGamemodes]);
+        return view('today', ['gamemodes' => $selectedGamemodes, 'modes' => json_encode($gamemodes)]);
     }
 
     public function submitGamemode(\App\Http\Requests\Gamemode $request)

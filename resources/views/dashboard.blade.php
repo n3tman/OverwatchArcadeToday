@@ -35,6 +35,7 @@
         <div class="card col-md-6">
             <div class="card-img-top {{$today->tile_large->code}} large">
                 <div class="gamemode-icon text-center">
+                    <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
                     <img src="/img/gamemodes/{{$today->tile_large->code}}.png" class="large-image">
                 </div>
             </div>
@@ -50,6 +51,7 @@
                 <div class="card col-md-6">
                     <div class="card-img-top {{$today->tile_weekly_1->code}}">
                         <div class="gamemode-icon text-center">
+                            <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
                             <img src="/img/gamemodes/{{$today->tile_weekly_1->code}}.png" class="small-image">
                         </div>
                     </div>
@@ -63,6 +65,7 @@
                 <div class="card col-md-6">
                     <div class="card-img-top {{$today->tile_daily->code}}">
                         <div class="gamemode-icon text-center">
+                            <span class="badge badge-warning badge-secondary cardRibbon">Changes daily</span>
                             <img src="/img/gamemodes/{{$today->tile_daily->code}}.png" class="small-image">
                         </div>
                     </div>
@@ -78,6 +81,7 @@
                 <div class="card col-md-6">
                     <div class="card-img-top {{$today->tile_weekly_2->code}}">
                         <div class="gamemode-icon text-center">
+                            <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
                             <img src="/img/gamemodes/{{$today->tile_weekly_2->code}}.png" class="small-image">
                         </div>
                     </div>
