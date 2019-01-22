@@ -23,8 +23,8 @@ class Controller extends BaseController
             abort('503', 'We already have a picks for today');
         }
 
-        $thisWeeksGamemode = Today::orderBy('created_at', 'desc')->take(1)->firstOrFail();
-        if (Carbon::parse($thisWeeksGamemode->created_at)->weekOfYear != Carbon::now()->weekOfYear) {
+        $thisWeeksGamemode = Today::orderBy('created_at', 'desc')->take(1)->first();
+        if ( Carbon::now()->isDayOfWeek(Carbon::TUESDAY) || !$thisWeeksGamemode ) {
             $thisWeeksGamemode = null;
         }
 
