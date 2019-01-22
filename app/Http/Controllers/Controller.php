@@ -22,14 +22,19 @@ class Controller extends BaseController
         if (Today::alreadyHaveGamemodeToday()) {
             abort('503', 'We already have a picks for today');
         }
-        
+
+        $thisWeeksGamemode = Today::orderBy('created_at', 'desc')->take(1)->firstOrFail();
+        if (Carbon::parse($thisWeeksGamemode->created_at)->weekOfYear != Carbon::now()->weekOfYear) {
+            $thisWeeksGamemode = null;
+        }
+
         $gamemodes = Gamemode::all();
         $selectedGamemodes = [];
         foreach ($gamemodes as $gamemode) {
-            $selectedGamemodes[$gamemode->id]= $gamemode->name. " (".$gamemode->players.")";
+            $selectedGamemodes[$gamemode->id] = $gamemode->name . " (" . $gamemode->players . ")";
         }
 
-        return view('today', ['gamemodes' => $selectedGamemodes, 'modes' => json_encode($gamemodes)]);
+        return view('today', ['gamemodes' => $selectedGamemodes, 'modes' => json_encode($gamemodes), 'thisWeeksGamemode' => $thisWeeksGamemode]);
     }
 
     public function submitGamemode(\App\Http\Requests\Gamemode $request)

@@ -27,7 +27,7 @@
 
     <div class="row mt-4" style="">
         <div class="card card_1 col-md-6">
-            <div class="card-img-top large">
+            <div class="card-img-top large" style="height:332px">
                 <div class="gamemode-icon text-center">
                     <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
                     <img src="/img/gamemodes/.png" class="large-image">
@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <div class="card card_5 col-md-6">
-                    <div class="card-img-top ">
+                    <div class="card-img-top">
                         <div class="gamemode-icon text-center">
                             <img src="/img/gamemodes/.png" class="small-image">
                         </div>
@@ -134,13 +134,21 @@
 
     var modes = {!! $modes !!};
 
+    @if($thisWeeksGamemode)
+        fillTile({{$thisWeeksGamemode->tile_1 + 1}}, 1);
+        fillTile({{$thisWeeksGamemode->tile_2 + 1}}, 2);
+        fillTile({{$thisWeeksGamemode->tile_4 + 1}}, 3);
+    @endif
+
+    fillTile(14, 5);
+
     $('.selectpicker').on('changed.bs.select', function (e, index) {
         fillTile(index, $(this).attr('card'));
     });
 
     function fillTile(index, cardId) {
         var mode = modes[index - 1];
-        $(".card_" + cardId + " .card-img-top").addClass(mode['code']);
+        $(".card_" + cardId + " .card-img-top").attr('class', 'card-img-top').addClass(mode['code']);
         $(".card_" + cardId + " h6").text(mode['players']);
         $(".card_" + cardId + " h4").text(mode['name']);
         $(".card_" + cardId + " img").attr('src', '/img/gamemodes/'+mode['code']+'.png');
