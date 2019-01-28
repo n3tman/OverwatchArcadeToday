@@ -134,32 +134,29 @@
 
     var modes = {!! $modes !!};
 
-    @if($thisWeeksGamemode)
-        fillTile({{$thisWeeksGamemode->tile_1 + 1}}, 1);
-        fillTile({{$thisWeeksGamemode->tile_2 + 1}}, 2);
-        fillTile({{$thisWeeksGamemode->tile_4 + 1}}, 3);
-    @endif
-
-    fillTile(14, 5);
 
     $('.selectpicker').on('changed.bs.select', function (e, index) {
-        fillTile(index, $(this).attr('card'));
+        fillTile($(this).val(), $(this).attr('card'));
     });
 
     function fillTile(index, cardId) {
         var mode = modes[index - 1];
+        console.log(mode);
         $(".card_" + cardId + " .card-img-top").attr('class', 'card-img-top').addClass(mode['code']);
         $(".card_" + cardId + " h6").text(mode['players']);
         $(".card_" + cardId + " h4").text(mode['name']);
-        $(".card_" + cardId + " img").attr('src', '/img/gamemodes/'+mode['code']+'.png');
+        $(".card_" + cardId + " img").attr('src', '/img/gamemodes/' + mode['code'] + '.png');
     }
 
-    function about() {
-        return swal({
-            title: "About",
-            text: "This website has been made by bluedog and maintained by everyone listed here. Special thanks to KVKH for XYZ",
-            button: "Alright, neat!",
-        });
-    }
+    setTimeout(function () {
+        @if($thisWeeksGamemode)
+        $('.card_1 .selectpicker').val({{$thisWeeksGamemode->tile_1 }}).change();
+        $('.card_2 .selectpicker').val({{$thisWeeksGamemode->tile_2 }}).change();
+        $('.card_3 .selectpicker').val({{$thisWeeksGamemode->tile_3 }}).change();
+        @endif
+        $('.card_5 .selectpicker').val(14).change();
+    }, 100);
+
+
 </script>
 </html>

@@ -43,12 +43,12 @@ class Today extends Model
 
     public function tile_daily()
     {
-        return $this->hasOne('App\Gamemode', 'id', 'tile_3');
+        return $this->hasOne('App\Gamemode', 'id', 'tile_4');
     }
 
     public function tile_weekly_2()
     {
-        return $this->hasOne('App\Gamemode', 'id', 'tile_4');
+        return $this->hasOne('App\Gamemode', 'id', 'tile_3');
     }
 
     public function tile_permanent()
