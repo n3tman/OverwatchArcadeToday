@@ -4,88 +4,60 @@
 @include('partials.head')
 
 <body style="background-image: url('{{$background}}')">
-<div class="container arcade">
-    <h1>Today's Overwatch Arcade</h1>
+<div class="container-fluid arcade">
+    <h1><img src="/img/ow-icon-115.png" class="ow-icon">Today's Arcade<img src="/img/ow-arcade-115.png" class="ow-arcade-icon"></h1>
     @if(!\App\Today::alreadyHaveGamemodeToday())
         <h3><span class="badge badge-warning">WARNING</span> Today's arcade has not been updated yet</h3>
     @endif
-    <div class="row mt-4" style="">
-        <div class="card col-md-6">
-            <div class="card-img-top {{$today->tile_large->code}} large">
-                <div class="gamemode-icon text-center">
-                    <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
-                    <img src="/img/gamemodes/{{$today->tile_large->code}}.png" class="large-image">
-                </div>
-            </div>
+
+    <div class="row card-grid">
+        <div class="card -large">
+            <span class="badge badge-success badge-secondary card-ribbon">Changes weekly</span>
+            <img src="/img/modes_large/{{$today->tile_large->code}}.jpg" class="card-image">
             <div class="card-body">
-                <div class="text-wrap">
-                    <h6 class="players">{{$today->tile_large->players}}</h6>
-                    <h4 class="gamemode-title">{{$today->tile_large->name}}</h4>
-                </div>
+                <p class="card-text item">{{$today->tile_large->players}}</p>
+                <h5 class="card-title item">{{$today->tile_large->name}}</h5>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="secondary">
             <div class="row">
-                <div class="card col-md-6">
-                    <div class="card-img-top {{$today->tile_weekly_1->code}}">
-                        <div class="gamemode-icon text-center">
-                            <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
-                            <img src="/img/gamemodes/{{$today->tile_weekly_1->code}}.png" class="small-image">
-                        </div>
-                    </div>
+                <div class="card">
+                    <span class="badge badge-success badge-secondary card-ribbon">Changes weekly</span>
+                    <img src="/img/modes/{{$today->tile_weekly_1->code}}.jpg" class="card-image">
                     <div class="card-body">
-                        <div class="text-wrap">
-                            <h6 class="players">{{$today->tile_weekly_1->players}}</h6>
-                            <h4 class="gamemode-title">{{$today->tile_weekly_1->name}}</h4>
-                        </div>
+                        <p class="card-text item">{{$today->tile_weekly_1->players}}</p>
+                        <h5 class="card-title item">{{$today->tile_weekly_1->name}}</h5>
                     </div>
                 </div>
-                <div class="card col-md-6">
-                    <div class="card-img-top {{$today->tile_daily->code}}">
-                        <div class="gamemode-icon text-center">
-                            <span class="badge badge-warning badge-secondary cardRibbon">Changes daily</span>
-                            <img src="/img/gamemodes/{{$today->tile_daily->code}}.png" class="small-image">
-                        </div>
-                    </div>
+                <div class="card">
+                    <span class="badge badge-warning badge-secondary card-ribbon">Changes daily</span>
+                    <img src="/img/modes/{{$today->tile_daily->code}}.jpg" class="card-image">
                     <div class="card-body">
-                        <div class="text-wrap">
-                            <h6 class="players">{{$today->tile_daily->players}}</h6>
-                            <h4 class="gamemode-title">{{$today->tile_daily->name}}</h4>
-                        </div>
+                        <p class="card-text item">{{$today->tile_daily->players}}</p>
+                        <h5 class="card-title item">{{$today->tile_daily->name}}</h5>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="card col-md-6">
-                    <div class="card-img-top {{$today->tile_weekly_2->code}}">
-                        <div class="gamemode-icon text-center">
-                            <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
-                            <img src="/img/gamemodes/{{$today->tile_weekly_2->code}}.png" class="small-image">
-                        </div>
-                    </div>
+                <div class="card">
+                    <span class="badge badge-success badge-secondary card-ribbon">Changes weekly</span>
+                    <img src="/img/modes/{{$today->tile_weekly_2->code}}.jpg" class="card-image">
                     <div class="card-body">
-                        <div class="text-wrap">
-                            <h6 class="players">{{$today->tile_weekly_2->players}}</h6>
-                            <h4 class="gamemode-title">{{$today->tile_weekly_2->name}}</h4>
-                        </div>
+                        <p class="card-text item">{{$today->tile_weekly_2->players}}</p>
+                        <h5 class="card-title item">{{$today->tile_weekly_2->name}}</h5>
                     </div>
                 </div>
-                <div class="card col-md-6">
-                    <div class="card-img-top {{$today->tile_permanent->code}}">
-                        <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/{{$today->tile_permanent->code}}.png" class="small-image">
-                        </div>
-                    </div>
+                <div class="card">
+                    <img src="/img/modes/{{$today->tile_permanent->code}}.jpg" class="card-image">
                     <div class="card-body">
-                        <div class="text-wrap">
-                            <h6 class="players">{{$today->tile_permanent->players}}</h6>
-                            <h4 class="gamemode-title">{{$today->tile_permanent->name}}</h4>
-                        </div>
+                        <p class="card-text item">{{$today->tile_permanent->players}}</p>
+                        <h5 class="card-title item">{{$today->tile_permanent->name}}</h5>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="row mt-4">
         <div class="col-lg-2 col-md-12 col-sm-12 text-md-center text-sm-center text-lg-left">
             @if(Auth::check())
@@ -132,7 +104,7 @@
 
 </body>
 <script src="{{ URL::asset('/js/jquery.min.js') }}"></script>
-<script src="{{ URL::asset('/js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('/js/bootstrap.bundle.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"
         integrity="sha256-FSEeC+c0OJh+0FI23EzpCWL3xGRSQnNkRGV2UF5maXs=" crossorigin="anonymous"></script>
 <script>

@@ -37,7 +37,7 @@
 
 </body>
 <script src="{{ URL::asset('/js/jquery.min.js') }}"></script>
-<script src="{{ URL::asset('/js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('/js/bootstrap.bundle.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"
         integrity="sha256-FSEeC+c0OJh+0FI23EzpCWL3xGRSQnNkRGV2UF5maXs=" crossorigin="anonymous"></script>
 </html>
