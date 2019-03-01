@@ -17,7 +17,7 @@
             <div class="card-img-top large" style="height:332px">
                 <div class="gamemode-icon text-center">
                     <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
-                    <img src="/img/gamemodes/.png" class="large-image">
+                    <img src="/img/gamemodes/mystery.png" class="large-image">
                 </div>
             </div>
             <div class="card-body">
@@ -36,7 +36,7 @@
                     <div class="card-img-top">
                         <div class="gamemode-icon text-center">
                             <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
-                            <img src="/img/gamemodes/.png" class="small-image">
+                            <img src="/img/gamemodes/mystery.png" class="small-image">
                         </div>
                     </div>
                     <div class="card-body">
@@ -53,7 +53,7 @@
                     <div class="card-img-top ">
                         <div class="gamemode-icon text-center">
                             <span class="badge badge-warning badge-secondary cardRibbon">Changes daily</span>
-                            <img src="/img/gamemodes/.png" class="small-image">
+                            <img src="/img/gamemodes/mystery.png" class="small-image">
                         </div>
                     </div>
                     <div class="card-body">
@@ -72,7 +72,7 @@
                     <div class="card-img-top">
                         <div class="gamemode-icon text-center">
                             <span class="badge badge-success badge-secondary cardRibbon">Changes weekly</span>
-                            <img src="/img/gamemodes/.png" class="small-image">
+                            <img src="/img/gamemodes/mystery.png" class="small-image">
                         </div>
                     </div>
                     <div class="card-body">
@@ -88,7 +88,7 @@
                 <div class="card card_5 col-md-6">
                     <div class="card-img-top">
                         <div class="gamemode-icon text-center">
-                            <img src="/img/gamemodes/.png" class="small-image">
+                            <img src="/img/gamemodes/mystery.png" class="small-image">
                         </div>
                     </div>
                     <div class="card-body">
@@ -118,11 +118,9 @@
         integrity="sha256-BEqTcxuDdEftl1gxpORMY6kS6tR8RJIL3WxfXKKTI+g=" crossorigin="anonymous"></script>
 
 <script>
-
     var modes = {!! $modes !!};
 
-
-    $('.selectpicker').on('changed.bs.select', function (e, index) {
+    $('.selectpicker').on('changed.bs.select', function () {
         fillTile($(this).val(), $(this).attr('card'));
     });
 
@@ -143,7 +141,5 @@
         @endif
         $('.card_5 .selectpicker').val(14).change();
     }, 100);
-
-
 </script>
 </html>

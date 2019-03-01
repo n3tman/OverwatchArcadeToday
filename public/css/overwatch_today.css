@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     color: #FFF;
+    cursor: url(../overwatch.cur), auto;
 }
 
 .overlay {
