@@ -34,7 +34,7 @@ class Controller extends BaseController
             $selectedGamemodes[$gamemode->id] = $gamemode->name . " (" . $gamemode->players . ")";
         }
 
-        return view('today', ['gamemodes' => $selectedGamemodes, 'modes' => json_encode($gamemodes), 'thisWeeksGamemode' => $thisWeeksGamemode]);
+        return view('today', ['gamemodes' => $selectedGamemodes, 'modes' => json_encode($gamemodes), 'thisWeeksGamemode' => $thisWeeksGamemode, 'background' => getRandomBackgorund()]);
     }
 
     public function submitGamemode(\App\Http\Requests\Gamemode $request)
@@ -59,7 +59,7 @@ class Controller extends BaseController
             return $user->contributions();
         });
 
-        return view('dashboard', ['today' => $today, 'contributors' => $contributors]);
+        return view('dashboard', ['today' => $today, 'contributors' => $contributors, 'background' => getRandomBackgorund()]);
     }
 
 }

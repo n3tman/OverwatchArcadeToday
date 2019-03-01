@@ -1,22 +1,9 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}" xmlns:javascript="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{env('APP_NAME')}}</title>
+@include('partials.head')
 
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"
-          integrity="sha256-sJQnfQcpMXjRFWGNJ9/BWB1l6q7bkQYsRqToxoHlNJY=" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="{{ URL::asset('css/overwatch_today.css') }}?ver={{env('APP_VERSION')}}">
-    <link rel="stylesheet" href="{{ URL::asset('css/gamemodes.css') }}?ver={{env('APP_VERSION')}}">
-
-</head>
-<body>
+<body style="background-image: url('{{$background}}')">
 <div class="overlay"></div>
 
 <div class="container arcade">
