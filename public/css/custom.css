@@ -89,6 +89,19 @@ td {
     margin-left: 2vw;
 }
 
+.arcades .header {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header > .reset {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'overwatch-italic', sans-serif;
+    font-size: 4.1vw;
+    line-height: normal;
+    width: 28vw;
+}
+
 .arcades .notice {
     margin-bottom: 1vw;
     font-size: 1.5vw;
@@ -159,6 +172,7 @@ td {
 .card > .card-body {
     background-color: #E7E7EB;
     height: 6.55vw;
+    overflow: hidden;
 }
 
 .card-body > .item {

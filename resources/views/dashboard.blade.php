@@ -6,7 +6,10 @@
 <body class="arcades" style="background-image: url('{{getRandomBackground()}}')">
 
 <div class="container-fluid arcade">
-    <h1><img src="/img/ow-icon-115.png" class="ow-icon">Today's Arcade<img src="/img/ow-arcade-115.png" class="ow-arcade-icon"></h1>
+    <div class="row header">
+        <h1><img src="/img/ow-icon-115.png" class="ow-icon">Today's Arcade<img src="/img/ow-arcade-115.png" class="ow-arcade-icon"></h1>
+        <div class="reset">Day Resets in <span class="timer">00:00:00</span></div>
+    </div>
     @if(!\App\Today::alreadyHaveGamemodeToday())
         <h3 class="notice"><span class="badge badge-warning">WARNING</span> Today's arcade hasn't been updated yet</h3>
     @endif
@@ -107,6 +110,8 @@
 <script src="{{ URL::asset('/js/bootstrap.bundle.min.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"
         integrity="sha256-FSEeC+c0OJh+0FI23EzpCWL3xGRSQnNkRGV2UF5maXs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="{{ URL::asset('/js/reset-timer.js') }}"></script>
 <script>
     function about() {
         return swal({

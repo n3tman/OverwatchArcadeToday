@@ -1,1 +1,162 @@
-[{"name":"Capture the Flag","players":"6v6","code":"capturetheflag"},{"name":"Competitive CTF","players":"6v6","code":"competitivectf"},{"name":"CTF Ayutthaya","players":"6v6","code":"ctfayutthaya"},{"name":"Chateau Deathmatch","players":"8 FFA","code":"chateaudeathmatch"},{"name":"Deathmatch","players":"8 FFA","code":"deathmatch"},{"name":"Competitive Deathmatch","players":"8 FFA","code":"competitivedeathmatch"},{"name":"3v3 Elimination","players":"3v3","code":"3v3elimination"},{"name":"3v3 Competitive Elimination","players":"3v3","code":"3v3competitiveelimination"},{"name":"3v3 Lockout Elimination","players":"3v3","code":"3v3lockoutelimination"},{"name":"6v6 Elimination","players":"6v6","code":"6v6elimination"},{"name":"6v6 Competitive Elimination","players":"6v6","code":"6v6competitiveelimination"},{"name":"6v6 Lockout Elimination","players":"6v6","code":"6v6lockoutelimination"},{"name":"Low Gravity","players":"6v6","code":"lowgravity"},{"name":"Mystery Heroes","players":"Mystery 6v6","code":"mysteryheroes"},{"name":"Petra Deathmatch","players":"8 Players FFA","code":"petradeathmatch"},{"name":"Team Deathmatch","players":"4v4","code":"teamdeathmatch"},{"name":"Competitive Team Deathmatch","players":"4v4","code":"competitiveteamdeathmatch"},{"name":"Total Mayhem","players":"6v6","code":"totalmayhem"},{"name":"No Limits","players":"6v6","code":"nolimits"},{"name":"Lucioball","players":"3v3 Lucioball","code":"lucioball"},{"name":"Copa Lucioball","players":"3v3 Lucioball","code":"copalucioball"},{"name":"Junkenstein\u2019s Revenge","players":"4 Players Co-op","code":"junkensteinsrevenge"},{"name":"Mei's Snowball Offensive","players":"6v6","code":"meissnowballoffensive"},{"name":"Yeti Hunt","players":"5v1","code":"yetihunt"},{"name":"Uprising","players":"4 Players Co-op","code":"uprising"},{"name":"Retribution","players":"4 Players Co-op","code":"retribution"},{"name":"Mystery Duel","players":"1v1","code":"mysteryduel"},{"name":"Limited Duel","players":"1v1","code":"limitedduel"},{"name":"Mystery Deathmatch","players":"Mystery 8 Players FFA","code":"mysterydeathmatch"},{"name":"Co-Op Mission Archives","players":"4 Players Co-op","code":"coopmissionarchives"},{"name":"CTF Busan","players":"6v6","code":"ctfbusan"}]
+[
+    {
+        "name": "Capture the Flag",
+        "players": "6v6",
+        "code": "capturetheflag"
+    },
+    {
+        "name": "Château Deathmatch",
+        "players": "8 Player FFA",
+        "code": "chateaudeathmatch"
+    },
+    {
+        "name": "Competitive CTF",
+        "players": "6v6",
+        "code": "competitivectf"
+    },
+    {
+        "name": "Competitive Deathmatch",
+        "players": "8 Player FFA",
+        "code": "competitivedeathmatch"
+    },
+    {
+        "name": "Competitive Elimination",
+        "players": "3v3",
+        "code": "3v3competitiveelimination"
+    },
+    {
+        "name": "Competitive Elimination",
+        "players": "6v6",
+        "code": "6v6competitiveelimination"
+    },
+    {
+        "name": "Competitive Team Deathmatch",
+        "players": "4v4",
+        "code": "competitiveteamdeathmatch"
+    },
+    {
+        "name": "Copa Lúcioball",
+        "players": "3v3",
+        "code": "copalucioball"
+    },
+    {
+        "name": "CTF Ayutthaya",
+        "players": "6v6",
+        "code": "ctfayutthaya"
+    },
+    {
+        "name": "CTF Busan",
+        "players": "6v6",
+        "code": "ctfbusan"
+    },
+    {
+        "name": "Deathmatch",
+        "players": "8 Player FFA",
+        "code": "deathmatch"
+    },
+    {
+        "name": "Elimination",
+        "players": "3v3",
+        "code": "3v3elimination"
+    },
+    {
+        "name": "Elimination",
+        "players": "6v6",
+        "code": "6v6elimination"
+    },
+    {
+        "name": "Junkenstein's Revenge",
+        "players": "4 Player Co-op",
+        "code": "junkensteinsrevenge"
+    },
+    {
+        "name": "Limited Duel",
+        "players": "1v1",
+        "code": "limitedduel"
+    },
+    {
+        "name": "Lockout Elimination",
+        "players": "3v3",
+        "code": "3v3lockoutelimination"
+    },
+    {
+        "name": "Lockout Elimination",
+        "players": "6v6",
+        "code": "6v6lockoutelimination"
+    },
+    {
+        "name": "Low Gravity",
+        "players": "6v6",
+        "code": "lowgravity"
+    },
+    {
+        "name": "Lúcioball",
+        "players": "3v3",
+        "code": "lucioball"
+    },
+    {
+        "name": "Mei's Snowball Offensive",
+        "players": "6v6",
+        "code": "meissnowballoffensive"
+    },
+    {
+        "name": "Mission Archives",
+        "players": "4 Player Co-op",
+        "code": "coopmissionarchives"
+    },
+    {
+        "name": "Mystery Deathmatch",
+        "players": "8 Player FFA",
+        "code": "mysterydeathmatch"
+    },
+    {
+        "name": "Mystery Duel",
+        "players": "1v1",
+        "code": "mysteryduel"
+    },
+    {
+        "name": "Mystery Heroes",
+        "players": "6v6",
+        "code": "mysteryheroes"
+    },
+    {
+        "name": "No Limits",
+        "players": "6v6",
+        "code": "nolimits"
+    },
+    {
+        "name": "Paris",
+        "players": "6v6",
+        "code": "paris"
+    },
+    {
+        "name": "Petra Deathmatch",
+        "players": "8 Player FFA",
+        "code": "petradeathmatch"
+    },
+    {
+        "name": "Retribution",
+        "players": "4 Player Co-op",
+        "code": "retribution"
+    },
+    {
+        "name": "Team Deathmatch",
+        "players": "4v4",
+        "code": "teamdeathmatch"
+    },
+    {
+        "name": "Total Mayhem",
+        "players": "6v6",
+        "code": "totalmayhem"
+    },
+    {
+        "name": "Uprising",
+        "players": "4 Player Co-op",
+        "code": "uprising"
+    },
+    {
+        "name": "Yeti Hunt",
+        "players": "5v1",
+        "code": "yetihunt"
+    }
+]
