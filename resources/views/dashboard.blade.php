@@ -82,7 +82,7 @@
 
     <div class="footer">
         <p>Game content and materials are trademarks and copyrights of their respective publisher and its licensors. All rights reserved.</p>
-        <p>This site is made for fun by <a href="//bluedog.pw">bluedog</a></p>
+        <p>This site is made for fun by <a href="//bluedog.dev">bluedog</a></p>
     </div>
 </div>
 
