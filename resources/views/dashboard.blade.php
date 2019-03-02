@@ -3,7 +3,8 @@
 
 @include('partials.head')
 
-<body style="background-image: url('{{$background}}')">
+<body class="arcades" style="background-image: url('{{getRandomBackground()}}')">
+
 <div class="container-fluid arcade">
     <h1><img src="/img/ow-icon-115.png" class="ow-icon">Today's Arcade<img src="/img/ow-arcade-115.png" class="ow-arcade-icon"></h1>
     @if(!\App\Today::alreadyHaveGamemodeToday())
@@ -83,21 +84,21 @@
 </div>
 
 <div class="container contributors" style="display:none;">
-    <h1 class="mb-4">Contributors</h1>
+    <h1>Contributors</h1>
     @foreach($contributors->chunk(6) as $contributorRow)
         <div class="row">
             @foreach($contributorRow as $contributor)
                 <div class="card contributor-card" style="width: 12rem;">
-                    <img class="card-img-top" src="{{$contributor->avatar}}">
+                    <img class="card-image" src="{{$contributor->avatar}}">
                     <div class="card-body">
-                        <h6 class="players">{{$contributor->contributions()}} contribution(s)</h6>
-                        <h4 class="gamemode-title">{{$contributor->battletag}}</h4>
+                        <p class="card-text item">{{$contributor->contributions()}} contribution(s)</p>
+                        <h5 class="card-title item">{{$contributor->battletag}}</h5>
                     </div>
                 </div>
             @endforeach
         </div>
     @endforeach
-    <a href="javascript:back()" class="btn btn-primary mt-4">Back</a>
+    <a href="javascript:back()" class="btn btn-primary">Back</a>
 </div>
 
 
@@ -121,7 +122,7 @@
     }
 
     function back() {
-        $(".container").fadeOut(250);
+        $(".contributors").fadeOut(250);
         $(".arcade").delay(250).fadeIn(250);
     }
 </script>

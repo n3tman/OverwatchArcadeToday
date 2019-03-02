@@ -34,6 +34,10 @@ body {
     max-width: 75.2vw;
 }
 
+.container {
+    margin: auto;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -65,27 +69,27 @@ td {
     vertical-align: middle !important;
 }
 
-.arcade .row {
+.arcades .row {
     margin: 0;
 }
 
-.arcade .ow-icon,
-.arcade .ow-arcade-icon {
+.arcades .ow-icon,
+.arcades .ow-arcade-icon {
     height: 4.5vw;
     width: auto;
 }
 
-.arcade .ow-icon {
+.arcades .ow-icon {
     opacity: 0.9;
     margin-right: 0.5vw;
 }
 
-.arcade .ow-arcade-icon {
+.arcades .ow-arcade-icon {
     opacity: 0.75;
     margin-left: 2vw;
 }
 
-.arcade .notice {
+.arcades .notice {
     margin-bottom: 1vw;
     font-size: 1.5vw;
     line-height: normal;
@@ -189,7 +193,8 @@ td {
     font-weight: 400;
 }
 
-.action-buttons .btn {
+.arcades input.btn,
+.arcades a.btn {
     font-size: 0.9vw;
     border: 2px solid transparent;
     border-radius: 5px;
@@ -199,22 +204,28 @@ td {
     color: #fff;
 }
 
-.action-buttons .btn:hover {
+.arcades input.btn:hover,
+.arcades a.btn:hover {
     opacity: 1;
     border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-.action-buttons .btn:focus,
-.action-buttons .btn:active {
+.arcades .btn:focus,
+.arcades .btn:active {
     box-shadow: none !important;
 }
 
-.action-buttons .btn-info {
+.arcades .btn-info,
+.arcades .btn-primary {
     background-color: #2A8CCE;
 }
 
-.action-buttons .btn-warning {
+.arcades .btn-warning {
     background-color: #B98539;
+}
+
+.form-group .btn {
+    border-radius: 0;
 }
 
 .footer {
@@ -232,8 +243,35 @@ td {
     color: #FFF;
 }
 
+.contributors > .btn {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
 .contributor-card {
-    margin: 0 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.contributor-card > .card-body {
+    height: auto;
+}
+
+.contributor-card > .card-body > .item {
+    font-family: 'overwatch', sans-serif;
+}
+
+.contributor-card > .card-body > .card-text {
+    color: #1C75BC;
+    font-size: 22px;
+    margin: 15px;
+}
+
+.contributor-card > .card-body > .card-title {
+    color: #28354F;
+    font-size: 22px;
+    margin: 15px;
 }
 
 .contributor-card h6, .contributor-card h4 {
@@ -247,4 +285,9 @@ td {
 .contributor-card img {
     height: auto;
     width: 100%;
+    border-radius: 5px;
+}
+
+.card > .form-group {
+    margin-bottom: 0;
 }

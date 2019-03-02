@@ -3,9 +3,10 @@
 
 @include('partials.head')
 
-<body style="background-image: url('{{$background}}')">
+<body class="arcades" style="background-image: url('{{getRandomBackground()}}')">
+
 <div class="container api">
-    <h1>Today's Overwatch Arcade REST API</h1>
+    <h1><img src="/img/ow-icon-115.png" class="ow-icon">Arcade REST API</h1>
     <p>Please be a nice person and don't abuse or sell or do any other unethical things with this free API.</p>
     <p>Giving credit is always appreciated 😁</p>
     <br />
