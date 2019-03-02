@@ -1,0 +1,486 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFF;
+    cursor: url(../overwatch.cur), auto;
+    display: flex;
+}
+
+@font-face {
+    font-family: 'overwatch';
+    src: url('../fonts/overwatch.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'overwatch-italic';
+    src: url('../fonts/overwatch-italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'overwatch-serif';
+    src: url('../fonts/overwatch-serif.woff') format('woff');
+}
+
+.container-fluid {
+    margin: auto;
+    padding: 0 18px;
+    box-sizing: content-box;
+    max-width: 75.2vw;
+}
+
+.container {
+    margin: auto;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+hr {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'overwatch-italic', sans-serif;
+    font-size: 6.1vw;
+    line-height: 6.4vw;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.01vw;
+}
+
+table {
+    background-color: #FFF;
+    color: #000;
+}
+
+td {
+    height: 100%;
+    vertical-align: middle !important;
+}
+
+.arcades .row {
+    margin: 0;
+}
+
+.arcades .ow-icon,
+.arcades .ow-arcade-icon {
+    height: 4.5vw;
+    width: auto;
+}
+
+.arcades .ow-icon {
+    opacity: 0.9;
+    margin-right: 0.5vw;
+}
+
+.arcades .ow-arcade-icon {
+    opacity: 0.75;
+    margin-left: 2vw;
+}
+
+.arcades .header {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header > .reset {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'overwatch-italic', sans-serif;
+    font-size: 4.1vw;
+    line-height: normal;
+    width: 28vw;
+}
+
+.arcades .notice {
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+    line-height: normal;
+}
+
+.card-ribbon {
+    position: absolute;
+    left: -0.8vw;
+    top: 1vw;
+    display: inline-block;
+    color: #ffffff;
+    font: 32px sans-serif;
+    background: #17B113;
+    font-family: 'overwatch-serif', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9vw;
+    padding: 0.59vw 0.92vw 0.49vw;
+    border-radius: 0;
+}
+
+.card-ribbon::after {
+    content: "";
+    bottom: -0.8vw;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #0C590A transparent transparent transparent;
+    left: 0;
+    width: 0.8vw;
+    border-width: 0.8vw 0 0 0.8vw;
+}
+
+.card-ribbon.-secondary {
+    background: #F89E1B;
+}
+
+.card-ribbon.-secondary::after {
+    border-color: #7C4F0E transparent transparent transparent;
+}
+
+.card-grid .card {
+    border-radius: 0;
+    border: 0;
+    margin-right: 1.18vw;
+    background: none;
+    box-sizing: content-box;
+    width: 19.65vw;
+}
+
+.card-grid .card.-large {
+    width: 33.52vw;
+}
+
+.secondary > .row + .row {
+    margin-top: 1.18vw;
+}
+
+.secondary .card:last-child {
+    margin-right: 0;
+}
+
+.card > .card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card > .card-body {
+    background-color: #E7E7EB;
+    height: 6.55vw;
+    overflow: hidden;
+}
+
+.card-body > .item {
+    font-family: 'overwatch-italic', sans-serif;
+}
+
+.card-body > .card-text {
+    color: #1C75BC;
+    font-size: 1.86vw;
+    margin: 1.1vw 0.9vw 0;
+    line-height: normal;
+}
+
+.card-body > .card-title {
+    color: #28354F;
+    font-size: 2.4vw;
+    letter-spacing: 1px;
+    line-height: normal;
+    margin: 0.25vw 0.8vw 0;
+}
+
+.info-panel {
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-panel .badge {
+    padding: 0.4vw;
+    font-size: 0.9vw;
+    font-weight: 400;
+}
+
+.arcades input.btn,
+.arcades a.btn {
+    font-size: 0.9vw;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    opacity: 0.9;
+    text-shadow: 0 0 1px white;
+    transition: opacity 0.2s ease-out, border 0.2s ease-out;
+    color: #fff;
+}
+
+.arcades input.btn:hover,
+.arcades a.btn:hover {
+    opacity: 1;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.arcades .btn:focus,
+.arcades .btn:active {
+    box-shadow: none !important;
+}
+
+.arcades .btn-info,
+.arcades .btn-primary {
+    background-color: #2A8CCE;
+}
+
+.arcades .btn-warning {
+    background-color: #B98539;
+}
+
+.form-group .btn {
+    border-radius: 0;
+}
+
+.footer {
+    color: #FFF;
+    text-align: center;
+    margin-top: 1vw;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer a {
+    font-weight: 700;
+    color: #FFF;
+}
+
+.contributors > .btn {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.contributor-card {
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.contributor-card > .card-body {
+    height: auto;
+}
+
+.contributor-card > .card-body > .item {
+    font-family: 'overwatch', sans-serif;
+}
+
+.contributor-card > .card-body > .card-text {
+    color: #1C75BC;
+    font-size: 22px;
+    margin: 15px;
+}
+
+.contributor-card > .card-body > .card-title {
+    color: #28354F;
+    font-size: 22px;
+    margin: 15px;
+}
+
+.contributor-card h6, .contributor-card h4 {
+    padding: 0 10px;
+}
+
+.contributor-card h4 {
+    font-size: 18px;
+}
+
+.contributor-card img {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card > .form-group {
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 1279px) {
+    .container-fluid {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 30px;
+    }
+
+    h1 {
+        font-size: 80px;
+        line-height: normal;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .arcades .ow-icon,
+    .arcades .ow-arcade-icon {
+        height: 80px;
+    }
+
+    .arcades .ow-icon {
+        margin-right: 5px;
+    }
+
+    .arcades .ow-arcade-icon {
+        margin-left: 20px;
+    }
+
+    .arcades .header {
+        justify-content: center;
+    }
+
+    .header > .reset {
+        font-size: 40px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .arcades .notice {
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .card-grid {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-grid .card {
+        margin-right: 0;
+        width: 48%;
+        max-width: 503px;
+    }
+
+    .card-grid .card.-large {
+        width: 100%;
+        max-width: 858px;
+        margin: 0 auto 30px;
+    }
+
+    .secondary > .row + .row {
+        margin-top: 30px;
+    }
+
+    .card-grid .card + .card {
+        margin-left: 4%;
+    }
+
+    .footer {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .card-ribbon {
+        left: -25px;
+        top: 20px;
+        font-size: 20px;
+        padding: 18px 40px;
+    }
+
+    .card-ribbon::after {
+        bottom: -25px;
+        width: 25px;
+        border-width: 25px 0 0 25px;
+    }
+
+    .card > .card-body {
+        height: 125px;
+    }
+
+    .card-body > .item {
+        font-family: 'overwatch-italic', sans-serif;
+    }
+
+    .card-body > .card-text {
+        font-size: 40px;
+        margin: 15px 20px 0;
+    }
+
+    .card-body > .card-title {
+        font-size: 40px;
+        margin: 10px 20px 0;
+    }
+
+    .info-panel {
+        margin: 20px auto 0;
+        max-width: 90%;
+        align-items: flex-start;
+    }
+
+    .info-panel .badge {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .info-panel .badge + .badge {
+        margin-top: 5px;
+    }
+
+    .info-panel > .info {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    .arcades input.btn,
+    .arcades a.btn {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .arcades input.btn[type="submit"] {
+        margin: 20px 0 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    .arcades .ow-icon,
+    .arcades .ow-arcade-icon {
+        height: 60px;
+    }
+
+    .card-grid .card {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .card-grid .card.-large {
+        margin-bottom: 20px;
+    }
+
+    .secondary > .row + .row {
+        margin-top: 0;
+    }
+
+    .card-grid .card + .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-grid .card.-large .card-ribbon {
+        top: 2.2vw;
+    }
+
+    .info-panel {
+        margin-top: 10px;
+    }
+
+    .header > .reset {
+        font-size: 35px;
+    }
+}
