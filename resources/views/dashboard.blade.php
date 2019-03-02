@@ -7,12 +7,12 @@
 <div class="container-fluid arcade">
     <h1><img src="/img/ow-icon-115.png" class="ow-icon">Today's Arcade<img src="/img/ow-arcade-115.png" class="ow-arcade-icon"></h1>
     @if(!\App\Today::alreadyHaveGamemodeToday())
-        <h3><span class="badge badge-warning">WARNING</span> Today's arcade has not been updated yet</h3>
+        <h3 class="notice"><span class="badge badge-warning">WARNING</span> Today's arcade hasn't been updated yet</h3>
     @endif
 
     <div class="row card-grid">
         <div class="card -large">
-            <span class="badge badge-success badge-secondary card-ribbon">Changes weekly</span>
+            <span class="card-ribbon">Changes weekly</span>
             <img src="/img/modes_large/{{$today->tile_large->code}}.jpg" class="card-image">
             <div class="card-body">
                 <p class="card-text item">{{$today->tile_large->players}}</p>
@@ -22,7 +22,7 @@
         <div class="secondary">
             <div class="row">
                 <div class="card">
-                    <span class="badge badge-success badge-secondary card-ribbon">Changes weekly</span>
+                    <span class="card-ribbon">Changes weekly</span>
                     <img src="/img/modes/{{$today->tile_weekly_1->code}}.jpg" class="card-image">
                     <div class="card-body">
                         <p class="card-text item">{{$today->tile_weekly_1->players}}</p>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <span class="badge badge-warning badge-secondary card-ribbon">Changes daily</span>
+                    <span class="card-ribbon -secondary">Changes daily</span>
                     <img src="/img/modes/{{$today->tile_daily->code}}.jpg" class="card-image">
                     <div class="card-body">
                         <p class="card-text item">{{$today->tile_daily->players}}</p>
@@ -40,7 +40,7 @@
             </div>
             <div class="row">
                 <div class="card">
-                    <span class="badge badge-success badge-secondary card-ribbon">Changes weekly</span>
+                    <span class="card-ribbon">Changes weekly</span>
                     <img src="/img/modes/{{$today->tile_weekly_2->code}}.jpg" class="card-image">
                     <div class="card-body">
                         <p class="card-text item">{{$today->tile_weekly_2->players}}</p>
@@ -58,28 +58,27 @@
         </div>
     </div>
 
-    <div class="row mt-4">
-        <div class="col-lg-2 col-md-12 col-sm-12 text-md-center text-sm-center text-lg-left">
+    <div class="info-panel">
+        <div class="item info">
             @if(Auth::check())
                 <span class="badge badge-warning">Logged in as: {{Auth::user()->battletag}}</span>
             @endif
             <span class="badge badge-success">Last updated: {{\Carbon\Carbon::parse($today->created_at)->diffForHumans()}}</span>
             <span class="badge badge-success">Last updated by: {{$today->byUser->battletag}}</span>
         </div>
-        <div class="col-lg-7 offset-lg-3 col-md-12 mt-sm-4 text-right">
+        <div class="item action-buttons">
             @if(Auth::check() && !\App\Today::alreadyHaveGamemodeToday())
-                <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set today's gamemodes</a>
+                <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set Today's Arcade</a>
             @endif
             <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
             <a href="/api" class="btn btn-info"><i class="fa fa-gear"></i> Free API</a>
             <a href="javascript:contributors()" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
         </div>
     </div>
-    <div class="row mt-4">
-        <p class="footer">
-            Game content and materials are trademarks and copyrights of their respective publisher and its licensors. All rights reserved.<br />
-            This site is made for fun by <a href="//bluedog.pw">bluedog</a>
-        </p>
+
+    <div class="footer">
+        <p>Game content and materials are trademarks and copyrights of their respective publisher and its licensors. All rights reserved.</p>
+        <p>This site is made for fun by <a href="//bluedog.pw">bluedog</a></p>
     </div>
 </div>
 

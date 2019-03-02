@@ -22,6 +22,11 @@ body {
     src: url('../fonts/overwatch-italic.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'overwatch-serif';
+    src: url('../fonts/overwatch-serif.woff') format('woff');
+}
+
 .container-fluid {
     margin: auto;
     padding: 0 18px;
@@ -80,11 +85,45 @@ td {
     margin-left: 2vw;
 }
 
+.arcade .notice {
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+    line-height: normal;
+}
+
 .card-ribbon {
     position: absolute;
+    left: -0.8vw;
+    top: 1vw;
+    display: inline-block;
+    color: #ffffff;
+    font: 32px sans-serif;
+    background: #17B113;
+    font-family: 'overwatch-serif', sans-serif;
     text-transform: uppercase;
+    font-size: 0.9vw;
+    padding: 0.59vw 0.92vw 0.49vw;
+    border-radius: 0;
+}
+
+.card-ribbon::after {
+    content: "";
+    bottom: -0.8vw;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #0C590A transparent transparent transparent;
     left: 0;
-    top: 10px;
+    width: 0.8vw;
+    border-width: 0.8vw 0 0 0.8vw;
+}
+
+.card-ribbon.-secondary {
+    background: #F89E1B;
+}
+
+.card-ribbon.-secondary::after {
+    border-color: #7C4F0E transparent transparent transparent;
 }
 
 .card-grid .card {
@@ -137,6 +176,62 @@ td {
     margin: 0.25vw 0.8vw 0;
 }
 
+.info-panel {
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-panel .badge {
+    padding: 0.4vw;
+    font-size: 0.9vw;
+    font-weight: 400;
+}
+
+.action-buttons .btn {
+    font-size: 0.9vw;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    opacity: 0.9;
+    text-shadow: 0 0 1px white;
+    transition: opacity 0.2s ease-out, border 0.2s ease-out;
+    color: #fff;
+}
+
+.action-buttons .btn:hover {
+    opacity: 1;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.action-buttons .btn:focus,
+.action-buttons .btn:active {
+    box-shadow: none !important;
+}
+
+.action-buttons .btn-info {
+    background-color: #2A8CCE;
+}
+
+.action-buttons .btn-warning {
+    background-color: #B98539;
+}
+
+.footer {
+    color: #FFF;
+    text-align: center;
+    margin-top: 1vw;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer a {
+    font-weight: 700;
+    color: #FFF;
+}
+
 .contributor-card {
     margin: 0 10px;
 }
@@ -152,16 +247,4 @@ td {
 .contributor-card img {
     height: auto;
     width: 100%;
-}
-
-.footer {
-    color: #FFF;
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-.footer a {
-    font-weight: 700;
-    color: #FFF;
 }
