@@ -125,7 +125,7 @@
     function notify() {
         return swal({
             title: "Get notified",
-            text: "There are multiples ways for you to get notified. The most easiest one being notified on Discord (https://discordapp.com/invite/WH6TpVr). Future plans are web-notifications and an opensource desktop application in the make atm by RomanGL",
+            text: "There are multiples ways for you to get notified. The most easiest one being notified on Discord (https://discordapp.com/invite/RAEyG9w). Future plans are web-notifications and an opensource desktop application in the make atm by RomanGL",
             button: "Alright, neat!",
         });
     }
