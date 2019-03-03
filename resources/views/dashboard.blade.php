@@ -17,7 +17,7 @@
     <div class="row card-grid">
         <div class="card -large">
             <span class="card-ribbon">Changes weekly</span>
-            <img src="/img/modes_large/{{$today->tile_large->code}}.jpg" class="card-image">
+            <img src="{{getTileImageByCode($today->tile_large->code, true)}}" class="card-image">
             <div class="card-body">
                 <p class="card-text item">{{$today->tile_large->players}}</p>
                 <h5 class="card-title item">{{$today->tile_large->name}}</h5>
@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="card">
                     <span class="card-ribbon">Changes weekly</span>
-                    <img src="/img/modes/{{$today->tile_weekly_1->code}}.jpg" class="card-image">
+                    <img src="{{getTileImageByCode($today->tile_weekly_1->code)}}" class="card-image">
                     <div class="card-body">
                         <p class="card-text item">{{$today->tile_weekly_1->players}}</p>
                         <h5 class="card-title item">{{$today->tile_weekly_1->name}}</h5>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="card">
                     <span class="card-ribbon -secondary">Changes daily</span>
-                    <img src="/img/modes/{{$today->tile_daily->code}}.jpg" class="card-image">
+                    <img src="{{getTileImageByCode($today->tile_daily->code)}}" class="card-image">
                     <div class="card-body">
                         <p class="card-text item">{{$today->tile_daily->players}}</p>
                         <h5 class="card-title item">{{$today->tile_daily->name}}</h5>
@@ -45,14 +45,14 @@
             <div class="row">
                 <div class="card">
                     <span class="card-ribbon">Changes weekly</span>
-                    <img src="/img/modes/{{$today->tile_weekly_2->code}}.jpg" class="card-image">
+                    <img src="{{getTileImageByCode($today->tile_weekly_2->code)}}" class="card-image">
                     <div class="card-body">
                         <p class="card-text item">{{$today->tile_weekly_2->players}}</p>
                         <h5 class="card-title item">{{$today->tile_weekly_2->name}}</h5>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/img/modes/{{$today->tile_permanent->code}}.jpg" class="card-image">
+                    <img src="{{getTileImageByCode($today->tile_permanent->code)}}" class="card-image">
                     <div class="card-body">
                         <p class="card-text item">{{$today->tile_permanent->players}}</p>
                         <h5 class="card-title item">{{$today->tile_permanent->name}}</h5>
