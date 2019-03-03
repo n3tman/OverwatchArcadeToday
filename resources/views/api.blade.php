@@ -20,13 +20,19 @@
         <tbody>
             <tr>
                 <td>Today's gamemode</td>
-                <td>/api/today</td>
+                <td><a href="/api/today">/api/today</a></td>
                 <td>get</td>
                 <td>Returns empty json array when there's no today's gamemode set yet</td>
             </tr>
             <tr>
                 <td>This week's gamemodes</td>
-                <td>/api/week</td>
+                <td><a href="/api/week">/api/week</a></td>
+                <td>get</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>All gamemodes</td>
+                <td><a href="/api/gamemodes">/api/gamemodes</a></td>
                 <td>get</td>
                 <td>-</td>
             </tr>

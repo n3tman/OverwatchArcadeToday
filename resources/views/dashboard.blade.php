@@ -76,6 +76,7 @@
             @endif
             <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
             <a href="/api" class="btn btn-info"><i class="fa fa-gear"></i> Free API</a>
+            <a href="javascript:notify()" class="btn btn-info"> <i class="fa fa-bell"></i> Notify me</a>
             <a href="javascript:contributors()" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
         </div>
     </div>
@@ -116,7 +117,15 @@
     function about() {
         return swal({
             title: "About",
-            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to Superbunny for starting this idea. In order to become a contributor, please contact me.",
+            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to Superbunny for starting this idea and n3tman for the web front-end development. In order to become a contributor and submit today's gamemode, please contact me.",
+            button: "Alright, neat!",
+        });
+    }
+
+    function notify() {
+        return swal({
+            title: "Get notified",
+            text: "There are multiples ways for you to get notified. The most easiest one being notified on Discord (https://discordapp.com/invite/WH6TpVr). Future plans are web-notifications and an opensource desktop application in the make atm by RomanGL",
             button: "Alright, neat!",
         });
     }

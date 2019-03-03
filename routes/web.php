@@ -17,9 +17,10 @@ Route::view('api', 'api');
 Route::get('/login', 'Auth\LoginController@loginBlizzard');
 Route::get('/login/callback', 'Auth\LoginController@loginCallback');
 
-Route::group(['prefix' => 'api', 'middleware' => 'throttle:5'], function () {
+Route::group(['prefix' => 'api', 'middleware' => 'throttle:10'], function () {
     Route::get('today', 'RestApiController@getTodaysGamemodes');
     Route::get('week', 'RestApiController@thisWeeksGamemodes');
+    Route::get('gamemodes', 'RestApiController@getGameModes');
 });
 
 
