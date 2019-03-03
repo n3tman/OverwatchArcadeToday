@@ -364,7 +364,7 @@ td {
 
     .card-grid .card.-large {
         width: 100%;
-        max-width: 858px;
+        max-width: 648px;
         margin: 0 auto 30px;
     }
 
@@ -385,7 +385,7 @@ td {
         left: -25px;
         top: 20px;
         font-size: 20px;
-        padding: 18px 40px;
+        padding: 12px 34px;
     }
 
     .card-ribbon::after {
@@ -469,10 +469,6 @@ td {
     .card-grid .card + .card {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .card-grid .card.-large .card-ribbon {
-        top: 2.2vw;
     }
 
     .info-panel {

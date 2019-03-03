@@ -97,17 +97,17 @@
         $(".card_" + cardId + " .card-image").attr('src', '/img/' + folder + mode['code'] + '.jpg');
     }
 
-    $(function() {
-        $('.selectpicker').on('changed.bs.select', function () {
-            fillTile($(this).val(), $(this).attr('card'));
-        });
+    $('.selectpicker').on('changed.bs.select', function () {
+        fillTile($(this).val(), $(this).attr('card'));
+    });
 
+    setTimeout(function () {
         @if($thisWeeksGamemode)
         $('.card_1 .selectpicker').val({{$thisWeeksGamemode->tile_1 }}).change();
         $('.card_2 .selectpicker').val({{$thisWeeksGamemode->tile_2 }}).change();
         $('.card_3 .selectpicker').val({{$thisWeeksGamemode->tile_3 }}).change();
         @endif
         $('.card_5 .selectpicker').val({{$thisWeeksGamemode->tile_5 }}).change();
-    });
+    }, 100);
 </script>
 </html>
