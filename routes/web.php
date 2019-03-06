@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'Controller@index')->name('login');
+Route::view('/notifications', 'notifications');
 Route::view('api', 'api');
 
 Route::get('/login', 'Auth\LoginController@loginBlizzard');

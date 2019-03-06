@@ -75,9 +75,9 @@
                 <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set Today's Arcade</a>
             @endif
             <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
-            <a href="/api" class="btn btn-info"><i class="fa fa-gear"></i> Free API</a>
-            <a href="javascript:notify()" class="btn btn-info"> <i class="fa fa-bell"></i> Notify me</a>
-            <a href="javascript:contributors()" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
+            <a href="javascript:fader('.arcade', '.api')" class="btn btn-info"><i class="fa fa-gear"></i> Free API</a>
+            <a href="javascript:fader('.arcade', '.downloading')" class="btn btn-info"> <i class="fa fa-bell"></i> Notify me</a>
+            <a href="javascript:fader('.arcade', '.contributors')" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
         </div>
     </div>
 
@@ -102,9 +102,68 @@
             @endforeach
         </div>
     @endforeach
-    <a href="javascript:back()" class="btn btn-primary">Back</a>
+    <a href="javascript:fader('.api, .downloading, .contributors', '.arcade')" class="btn btn-primary">Back</a>
 </div>
 
+<div class="container api" style="display: none;">
+    <h1><img src="/img/ow-icon-115.png" class="ow-icon">Arcade REST API</h1>
+    <p>Please be a nice person and don't abuse or sell or do any other unethical things with this free API.</p>
+    <p>Giving credit is always appreciated 😁</p>
+    <br />
+    <table class="table table-hover table-striped">
+        <thead>
+        <th>Name</th>
+        <th>URL</th>
+        <th>Method</th>
+        <th>Notes</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Today's gamemode</td>
+            <td><a href="/api/today">/api/today</a></td>
+            <td>get</td>
+            <td>Returns empty json array when there's no today's gamemode set yet</td>
+        </tr>
+        <tr>
+            <td>This week's gamemodes</td>
+            <td><a href="/api/week">/api/week</a></td>
+            <td>get</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>All gamemodes</td>
+            <td><a href="/api/gamemodes">/api/gamemodes</a></td>
+            <td>get</td>
+            <td>-</td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="javascript:fader('.api, .downloading, .contributors', '.arcade')" class="btn btn-primary">Back</a>
+</div>
+
+<div class="container downloading" style="display: none;">
+    <h1><img src="/img/ow-icon-115.png" class="ow-icon">Get notified</h1>
+    <div class="row mb-4 mt-4">
+        <div class="col-md-4 col-sm-12">
+            <h3><img src="/img/notify/microsoft.png" height="32px;"> Windows application</h3>
+            <p style="min-height:80px;">Download the standalone desktop application built by RomanGL. Directly available from the Microsoft
+                store. This application is <a href="https://github.com/RomanGL/OWArcadeToday">opensource</a></p>
+            <a href="//www.microsoft.com/store/apps/9NJPP10NDSR4" class="btn btn-sm btn-warning"><i class="fa fa-download"></i> Download</a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <h3><img src="/img/notify/discord.png" height="32px;"> Discord</h3>
+            <p style="min-height:80px;">Join the Discord server and get a notified with the Discord bot built by Chaosx.</p>
+            <a href="https://discord.gg/RAEyG9w" class="btn btn-sm btn-success">Join Discord</a>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <h3><img src="/img/notify/twitter.png" height="32px;"> Twitter</h3>
+            <p style="min-height:80px;">Follow the Twitter, when a user submits on the website it will be automatically posted on Twitter.</p>
+            <a href="https://twitter.com/OWarcade?ref_src=twsrc%5Etfw" data-size="large" class="twitter-follow-button" data-show-count="true">Follow @OWarcade</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+    <hr />
+    <a href="javascript:fader('.api, .downloading, .contributors', '.arcade')" class="btn btn-primary">Back</a>
+</div>
 
 </body>
 <script src="{{ URL::asset('/js/jquery.min.js') }}"></script>
@@ -117,27 +176,15 @@
     function about() {
         return swal({
             title: "About",
-            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to Superbunny for starting this idea and n3tman for the web front-end development. In order to become a contributor and submit today's gamemode, please contact me.",
+            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to KVKH for all the contributions and n3tman for the web front-end development. In order to become a contributor and submit today's gamemode, please contact me.",
             button: "Alright, neat!",
         });
     }
 
-    function notify() {
-        return swal({
-            title: "Get notified",
-            text: "There are multiples ways for you to get notified. The most easiest one being notified on Discord (https://discordapp.com/invite/RAEyG9w). Future plans are web-notifications and an opensource desktop application in the make atm by RomanGL",
-            button: "Alright, neat!",
-        });
-    }
-
-    function contributors() {
-        $(".arcade").fadeOut(250);
-        $(".contributors").delay(250).fadeIn(250);
-    }
-
-    function back() {
-        $(".contributors").fadeOut(250);
-        $(".arcade").delay(250).fadeIn(250);
+    function fader(fadeOut, fadeIn) {
+        console.log(fadeOut, fadeIn);
+        $(fadeOut).fadeOut(250);
+        $(fadeIn).delay(250).fadeIn(250);
     }
 </script>
 </html>
