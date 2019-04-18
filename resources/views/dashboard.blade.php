@@ -89,7 +89,7 @@
 
 <div class="container contributors" style="display:none;">
     <h1>Contributors</h1>
-    @foreach($contributors->chunk(6) as $contributorRow)
+    @foreach($contributors->chunk(5) as $contributorRow)
         <div class="row">
             @foreach($contributorRow as $contributor)
                 <div class="card contributor-card" style="width: 12rem;">
