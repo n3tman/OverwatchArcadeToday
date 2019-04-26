@@ -41,7 +41,7 @@ class Today extends Model
             $weekly = $new;
         }
         return
-            "Current modes - " . Carbon::now()->format("D M d, Y") . "<br />" .
+            "Current modes - " . Carbon::now("UTC")->format("D M d, Y") . "<br />" .
             $weekly . $this->tile_large->getTwitterLine() . " [Weekly]<br />" .
             $weekly . $this->tile_weekly_1->getTwitterLine() . " [Weekly]<br />" .
             $new . $this->tile_daily->getTwitterLine() . " [Daily]<br />" .

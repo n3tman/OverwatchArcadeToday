@@ -53,9 +53,10 @@ class Controller extends BaseController
 
     public function twitterText()
     {
-        $today = Today::where('created_at', '>=', Carbon::now("UTC"))->get()->first();
+        $today = Today::where('created_at', '>=', Carbon::now("UTC")->format("Y-m-d"))->get()->first();
+        return dd(Carbon::now("UTC")->format("Y-m-d"));
         if (!$today) {
-            return "[]";
+            return "Gamemode hasn't been set today";
         }
         return $today->getTwitterMessage();
     }
