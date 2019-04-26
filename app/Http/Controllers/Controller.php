@@ -24,7 +24,7 @@ class Controller extends BaseController
         }
 
         $thisWeeksGamemode = Today::orderBy('created_at', 'desc')->take(1)->first();
-        if ( Carbon::now()->isDayOfWeek(Carbon::TUESDAY) || !$thisWeeksGamemode ) {
+        if (Carbon::now()->isDayOfWeek(Carbon::TUESDAY) || !$thisWeeksGamemode) {
             $thisWeeksGamemode = null;
         }
 
@@ -51,6 +51,14 @@ class Controller extends BaseController
         return redirect('/');
     }
 
+    public function twitterText()
+    {
+        $today = Today::where('created_at', '>=', Carbon::now("UTC"))->get()->first();
+        if (!$today) {
+            return "[]";
+        }
+        return $today->getTwitterMessage();
+    }
 
     public function index()
     {

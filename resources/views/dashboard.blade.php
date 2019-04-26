@@ -75,6 +75,7 @@
                 <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set Today's Arcade</a>
             @endif
             <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
+            <a href="/twitter" class="btn btn-warning"><i class="fa fa-twitter"></i> Twitter text</a>
             <a href="javascript:fader('.arcade', '.api')" class="btn btn-info"><i class="fa fa-gear"></i> Free API</a>
             <a href="javascript:fader('.arcade', '.downloading')" class="btn btn-info"> <i class="fa fa-bell"></i> Notify me</a>
             <a href="javascript:fader('.arcade', '.contributors')" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
@@ -182,7 +183,6 @@
     }
 
     function fader(fadeOut, fadeIn) {
-        console.log(fadeOut, fadeIn);
         $(fadeOut).fadeOut(250);
         $(fadeIn).delay(250).fadeIn(250);
     }

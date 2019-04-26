@@ -12,8 +12,14 @@ class Gamemode extends Model
      * @param string $name
      * @return integer id
      */
-    public static function getGamemodeIdByName(string $name){
+    public static function getGamemodeIdByName(string $name)
+    {
         $gamemode = Gamemode::where('name', $name)->firstOrFail();
         return $gamemode->id;
+    }
+
+    public function getTwitterLine()
+    {
+        return $this->name . " " . $this->emoji;
     }
 }

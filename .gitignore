@@ -4,6 +4,7 @@ public/css/gamemodes.css
 
 .idea
 vendor/
+laradock/
 node_modules/
 npm-debug.log
 

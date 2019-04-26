@@ -13,7 +13,7 @@ class Today extends Model
     {
         $lastGamemode = Today::select('created_at')->orderBy('created_at', 'desc')->first();
 
-        if(!$lastGamemode){
+        if (!$lastGamemode) {
             return false;
         }
 
@@ -27,6 +27,26 @@ class Today extends Model
             return true;
         }
         return false;
+    }
+
+    /**
+     *  Creates twitter format for KVKH's twitter
+     * @return string
+     */
+    public function getTwitterMessage()
+    {
+        $weekly = "🔹 ";
+        $new = "🆕 ";
+        if (Carbon::now("UTC")->dayOfWeek == Carbon::TUESDAY) {
+            $weekly = $new;
+        }
+        return
+            "Current modes - " . Carbon::now()->format("D M d, Y") . "<br />" .
+            $weekly . $this->tile_large->getTwitterLine() . " [Weekly]<br />" .
+            $weekly . $this->tile_weekly_1->getTwitterLine() . " [Weekly]<br />" .
+            $new . $this->tile_daily->getTwitterLine() . " [Daily]<br />" .
+            $weekly . $this->tile_weekly_2->getTwitterLine() . " [Weekly]<br />" .
+            $weekly . $this->tile_permanent->getTwitterLine() . " [Weekly]<br />";
     }
 
     // Relations
