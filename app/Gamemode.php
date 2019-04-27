@@ -20,6 +20,6 @@ class Gamemode extends Model
 
     public function getTwitterLine()
     {
-        return $this->name . " " . $this->emoji;
+        return $this->players . " " . $this->name . " " . $this->emoji;
     }
 }

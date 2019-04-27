@@ -7,7 +7,8 @@
 
 <div class="container-fluid arcade">
     <div class="row header">
-        <h1><img src="/img/ow-icon-115.png" class="ow-icon">Today's Arcade<img src="/img/ow-arcade-115.png" class="ow-arcade-icon"></h1>
+        <h1><img src="/img/ow-icon-115.png" class="ow-icon">Today's Arcade<img src="/img/ow-arcade-115.png"
+                                                                               class="ow-arcade-icon"></h1>
         <div class="reset">Day Resets in <span class="timer">00:00:00</span></div>
     </div>
     @if(!\App\Today::alreadyHaveGamemodeToday())
@@ -75,15 +76,20 @@
                 <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set Today's Arcade</a>
             @endif
             <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
-            <a href="/twitter" class="btn btn-warning"><i class="fa fa-twitter"></i> Twitter text</a>
+            @if(Auth::check())
+                <a href="/twitter" class="btn btn-warning"><i class="fa fa-twitter"></i> Twitter text</a>
+            @endif
             <a href="javascript:fader('.arcade', '.api')" class="btn btn-info"><i class="fa fa-gear"></i> Free API</a>
-            <a href="javascript:fader('.arcade', '.downloading')" class="btn btn-info"> <i class="fa fa-bell"></i> Notify me</a>
-            <a href="javascript:fader('.arcade', '.contributors')" class="btn btn-info"><i class="fa fa-users"></i> Contributors</a>
+            <a href="javascript:fader('.arcade', '.downloading')" class="btn btn-info"> <i class="fa fa-bell"></i>
+                Notify me</a>
+            <a href="javascript:fader('.arcade', '.contributors')" class="btn btn-info"><i class="fa fa-users"></i>
+                Contributors</a>
         </div>
     </div>
 
     <div class="footer">
-        <p>Game content and materials are trademarks and copyrights of their respective publisher and its licensors. All rights reserved.</p>
+        <p>Game content and materials are trademarks and copyrights of their respective publisher and its licensors. All
+            rights reserved.</p>
         <p>This site is made for fun by <a href="//bluedog.dev">bluedog</a></p>
     </div>
 </div>
@@ -110,7 +116,7 @@
     <h1><img src="/img/ow-icon-115.png" class="ow-icon">Arcade REST API</h1>
     <p>Please be a nice person and don't abuse or sell or do any other unethical things with this free API.</p>
     <p>Giving credit is always appreciated 😁</p>
-    <br />
+    <br/>
     <table class="table table-hover table-striped">
         <thead>
         <th>Name</th>
@@ -147,22 +153,28 @@
     <div class="row mb-4 mt-4">
         <div class="col-md-4 col-sm-12">
             <h3><img src="/img/notify/microsoft.png" height="32px;"> Windows application</h3>
-            <p style="min-height:80px;">Download the standalone desktop application built by RomanGL. Directly available from the Microsoft
+            <p style="min-height:80px;">Download the standalone desktop application built by RomanGL. Directly available
+                from the Microsoft
                 store. This application is <a href="https://github.com/RomanGL/OWArcadeToday">opensource</a></p>
-            <a href="//www.microsoft.com/store/apps/9NJPP10NDSR4" class="btn btn-sm btn-warning"><i class="fa fa-download"></i> Download</a>
+            <a href="//www.microsoft.com/store/apps/9NJPP10NDSR4" class="btn btn-sm btn-warning"><i
+                        class="fa fa-download"></i> Download</a>
         </div>
         <div class="col-md-4 col-sm-12">
             <h3><img src="/img/notify/discord.png" height="32px;"> Discord</h3>
-            <p style="min-height:80px;">Join the Discord server and get a notified with the Discord bot built by Chaosx.</p>
+            <p style="min-height:80px;">Join the Discord server and get a notified with the Discord bot built by
+                Chaosx.</p>
             <a href="https://discord.gg/RAEyG9w" class="btn btn-sm btn-success">Join Discord</a>
         </div>
         <div class="col-md-4 col-sm-12">
             <h3><img src="/img/notify/twitter.png" height="32px;"> Twitter</h3>
-            <p style="min-height:80px;">Follow the Twitter, when a user submits on the website it will be automatically posted on Twitter.</p>
-            <a href="https://twitter.com/OWarcade?ref_src=twsrc%5Etfw" data-size="large" class="twitter-follow-button" data-show-count="true">Follow @OWarcade</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <p style="min-height:80px;">Follow the Twitter, when a user submits on the website it will be automatically
+                posted on Twitter.</p>
+            <a href="https://twitter.com/OWarcade?ref_src=twsrc%5Etfw" data-size="large" class="twitter-follow-button"
+               data-show-count="true">Follow @OWarcade</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
-    <hr />
+    <hr/>
     <a href="javascript:fader('.api, .downloading, .contributors', '.arcade')" class="btn btn-primary">Back</a>
 </div>
 
