@@ -3,55 +3,55 @@
     "name": "Capture the Flag",
     "players": "6v6",
     "code": "capturetheflag",
-    "emoji": "\uD83D\uDEA9"
+    "emoji": "\ud83d\udea9"
   },
   {
-    "name": "Château Deathmatch",
+    "name": "Ch\u00e2teau Deathmatch",
     "players": "8 Player FFA",
-    "code": "chateaudeathmatch",
-    "emoji": "\uD83C\uDFF0"
+    "code": "ch\u00e2teaudeathmatch",
+    "emoji": "\ud83c\udff0"
   },
   {
     "name": "Competitive CTF",
     "players": "6v6",
     "code": "competitivectf",
-    "emoji": "\uD83C\uDFC6\uD83D\uDEA9"
+    "emoji": "\ud83c\udfc6\ud83d\udea9"
   },
   {
     "name": "Competitive Deathmatch",
     "players": "8 Player FFA",
     "code": "competitivedeathmatch",
-    "emoji": "\uD83C\uDFC6☠"
+    "emoji": "\ud83c\udfc6\u2620"
   },
   {
     "name": "Competitive Elimination",
     "players": "3v3",
-    "code": "3v3competitiveelimination",
-    "emoji": "\uD83D\uDD2B"
+    "code": "competitiveelimination",
+    "emoji": "\ud83d\udd2b"
   },
   {
     "name": "Competitive Elimination",
     "players": "6v6",
-    "code": "6v6competitiveelimination",
-    "emoji": "\uD83D\uDD2B"
+    "code": "competitiveelimination",
+    "emoji": "\ud83d\udd2b"
   },
   {
     "name": "Competitive Team Deathmatch",
     "players": "4v4",
     "code": "competitiveteamdeathmatch",
-    "emoji": "\uD83C\uDFC6\uD83D\uDD2B"
+    "emoji": "\ud83c\udfc6\ud83d\udd2b"
   },
   {
-    "name": "Copa Lúcioball",
+    "name": "Copa L\u00facioball",
     "players": "3v3",
-    "code": "copalucioball",
-    "emoji": "\uD83C\uDFC6⚽"
+    "code": "copal\u00facioball",
+    "emoji": "\ud83c\udfc6\u26bd"
   },
   {
     "name": "CTF Ayutthaya",
     "players": "6v6",
     "code": "ctfayutthaya",
-    "emoji": "\uD83C\uDDF9\uD83C\uDDED"
+    "emoji": "\ud83c\uddf9\ud83c\udded"
   },
   {
     "name": "CTF Busan",
@@ -63,132 +63,138 @@
     "name": "Deathmatch",
     "players": "8 Player FFA",
     "code": "deathmatch",
-    "emoji": "\uD83D\uDC80"
+    "emoji": "\ud83d\udc80"
   },
   {
     "name": "Elimination",
     "players": "3v3",
-    "code": "3v3elimination",
-    "emoji": "\uD83D\uDD2B"
+    "code": "elimination",
+    "emoji": "\ud83d\udd2b"
   },
   {
     "name": "Elimination",
     "players": "6v6",
-    "code": "6v6elimination",
-    "emoji": "\uD83D\uDD2B"
+    "code": "elimination",
+    "emoji": "\ud83d\udd2b"
   },
   {
     "name": "Junkenstein's Revenge",
     "players": "4 Player Co-op",
     "code": "junkensteinsrevenge",
-    "emoji": "\uD83C\uDF83"
+    "emoji": "\ud83c\udf83"
   },
   {
     "name": "Limited Duel",
     "players": "1v1",
     "code": "limitedduel",
-    "emoji": "⚔"
+    "emoji": "\u2694"
   },
   {
     "name": "Lockout Elimination",
     "players": "3v3",
-    "code": "3v3lockoutelimination",
+    "code": "lockoutelimination",
     "emoji": null
   },
   {
     "name": "Lockout Elimination",
     "players": "6v6",
-    "code": "6v6lockoutelimination",
+    "code": "lockoutelimination",
     "emoji": null
   },
   {
     "name": "Low Gravity",
     "players": "6v6",
     "code": "lowgravity",
-    "emoji": "\uD83C\uDF15"
+    "emoji": "\ud83c\udf15"
   },
   {
-    "name": "Lúcioball",
+    "name": "L\u00facioball",
     "players": "3v3",
-    "code": "lucioball",
-    "emoji": "⚽"
+    "code": "l\u00facioball",
+    "emoji": "\u26bd"
   },
   {
     "name": "Mei's Snowball Offensive",
     "players": "6v6",
     "code": "meissnowballoffensive",
-    "emoji": "❄"
+    "emoji": "\u2744"
   },
   {
     "name": "Mission Archives",
     "players": "4 Player Co-op",
-    "code": "coopmissionarchives",
-    "emoji": "\uD83C\uDF29"
+    "code": "missionarchives",
+    "emoji": null
   },
   {
     "name": "Mystery Deathmatch",
     "players": "8 Player FFA",
     "code": "mysterydeathmatch",
-    "emoji": "\uD83E\uDD14\uD83D\uDC80"
+    "emoji": "\ud83e\udd14\ud83d\udc80"
   },
   {
     "name": "Mystery Duel",
     "players": "1v1",
     "code": "mysteryduel",
-    "emoji": "\uD83C\uDD9A"
+    "emoji": "\ud83c\udd9a"
   },
   {
     "name": "Mystery Heroes",
     "players": "6v6",
     "code": "mysteryheroes",
-    "emoji": "\uD83E\uDD14"
+    "emoji": "\ud83e\udd14"
   },
   {
     "name": "No Limits",
     "players": "6v6",
     "code": "nolimits",
-    "emoji": "\uD83D\uDD28"
+    "emoji": "\ud83d\udd28"
   },
   {
     "name": "Paris",
     "players": "6v6",
     "code": "paris",
-    "emoji": "\uD83C\uDDEB\uD83C\uDDF7"
+    "emoji": "\ud83c\uddeb\ud83c\uddf7"
   },
   {
     "name": "Petra Deathmatch",
     "players": "8 Player FFA",
     "code": "petradeathmatch",
-    "emoji": "\uD83D\uDC80"
+    "emoji": "\ud83d\udc80"
   },
   {
     "name": "Retribution",
     "players": "4 Player Co-op",
     "code": "retribution",
-    "emoji": "\uD83D\uDD75️\u200D♀️"
+    "emoji": "\ud83d\udd75\ufe0f\u200d\u2640\ufe0f"
   },
   {
     "name": "Team Deathmatch",
     "players": "4v4",
     "code": "teamdeathmatch",
-    "emoji": "\uD83D\uDC80"
+    "emoji": "\ud83d\udc80"
   },
   {
     "name": "Total Mayhem",
     "players": "6v6",
     "code": "totalmayhem",
-    "emoji": "\uD83D\uDCA5"
+    "emoji": "\ud83d\udca5"
   },
   {
     "name": "Uprising",
     "players": "4 Player Co-op",
     "code": "uprising",
-    "emoji": "\uD83E\uDD16"
+    "emoji": "\ud83e\udd16"
   },
   {
     "name": "Yeti Hunt",
     "players": "5v1",
     "code": "yetihunt",
-    "emoji": "\uD83E\uDD69"
+    "emoji": "\ud83e\udd69"
+  },
+  {
+    "name": "Havana",
+    "players": "6v6",
+    "code": "havana",
+    "emoji": "\ud83c\udfdd\ufe0f"
   }
 ]
