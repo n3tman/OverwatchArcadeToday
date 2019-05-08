@@ -13,9 +13,9 @@ class Today extends Model
     {
         $lastGamemode = Today::orderBy('created_at', 'desc')->first();
         $lastGamemodeTime = Carbon::parse($lastGamemode->created_at, 'Europe/Amsterdam')->setTimezone('UTC');
-        $resetTime = Carbon::now('UTC')->hour(2);
+        $resetTime = Carbon::now('UTC')->hour(0);
 
-        if ($resetTime->diffInHours($lastGamemodeTime) < 24) {
+        if ($resetTime->isSameDay($lastGamemodeTime)) {
             return $lastGamemode;
         }
         return false;
