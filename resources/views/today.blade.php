@@ -107,7 +107,7 @@
         $('.card_2 .selectpicker').val({{$thisWeeksGamemode->tile_2 }}).change();
         $('.card_3 .selectpicker').val({{$thisWeeksGamemode->tile_3 }}).change();
         @endif
-        $('.card_5 .selectpicker').val({{$thisWeeksGamemode->tile_5 }}).change();
+        $('.card_5 .selectpicker').val(24).change();
     }, 100);
 </script>
 </html>
