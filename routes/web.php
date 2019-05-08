@@ -18,6 +18,7 @@ Route::view('api', 'api');
 Route::get('/login', 'Auth\LoginController@loginBlizzard');
 Route::get('/login/callback', 'Auth\LoginController@loginCallback');
 
+
 Route::get('/twitter', 'Controller@twitterText');
 
 Route::group(['prefix' => 'api', 'middleware' => 'throttle:10'], function () {
@@ -29,4 +30,5 @@ Route::group(['prefix' => 'api', 'middleware' => 'throttle:10'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/gamemode', 'Controller@todaysGamemode');
     Route::post('/gamemode/submit', 'Controller@submitGamemode')->name('gamemode.submit');
+    Route::post('/gamemode/revert', 'Controller@revertTodaysGamemode')->name('gamemode.revert');
 });

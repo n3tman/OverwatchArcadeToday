@@ -11,20 +11,11 @@ class Today extends Model
 
     public static function alreadyHaveGamemodeToday()
     {
-        $lastGamemode = Today::select('created_at')->orderBy('created_at', 'desc')->first();
+        $lastGamemode = Today::orderBy('created_at', 'desc')->first();
+        $resetTime = Carbon::now('UTC')->hour(2);
 
-        if (!$lastGamemode) {
-            return false;
-        }
-
-        $lastGamemode = Carbon::parse($lastGamemode->created_at, 'Europe/Amsterdam');
-        $lastGamemode->setTimezone('UTC');
-
-        $now = Carbon::now('UTC');
-        $resetTime = Carbon::create($now->year, $now->month, $now->day, "0");
-
-        if ($lastGamemode > $resetTime) {
-            return true;
+        if ($lastGamemode->created_at > $resetTime) {
+            return $lastGamemode;
         }
         return false;
     }
@@ -46,7 +37,7 @@ class Today extends Model
             $weekly . $this->tile_weekly_1->getTwitterLine() . " [Weekly]<br />" .
             $new . $this->tile_daily->getTwitterLine() . " [Daily]<br />" .
             $weekly . $this->tile_weekly_2->getTwitterLine() . " [Weekly]<br />" .
-            $weekly . $this->tile_permanent->getTwitterLine() . " [Weekly]<br />";
+            $weekly . $this->tile_permanent->getTwitterLine() . " [Permanent]<br />";
     }
 
     // Relations

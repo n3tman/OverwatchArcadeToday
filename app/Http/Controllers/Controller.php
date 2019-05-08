@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Audit;
 use App\Gamemode;
 use App\Today;
 use App\User;
@@ -49,6 +50,17 @@ class Controller extends BaseController
         $today->save();
 
         return redirect('/');
+    }
+
+    public function revertTodaysGamemode()
+    {
+        $Today = Today::alreadyHaveGamemodeToday();
+        if (!$Today) {
+            abort('503', 'No gamemode has been set yet, nothing to undo');
+        }
+        $Today->delete();
+        $log = Audit::create(['user_battletag' => Auth::user()->battletag, 'type' => 'delete']);
+        return back();
     }
 
     public function twitterText()

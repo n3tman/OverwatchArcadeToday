@@ -66,23 +66,40 @@
     <div class="info-panel">
         <div class="item info">
             @if(Auth::check())
-                <span class="badge badge-warning">Logged in as: {{Auth::user()->battletag}}</span>
+                <span class="badge badge-warning">Logged in as: {{Auth::user()->battletag}}</span> <br/>
             @endif
             <span class="badge badge-success">Last updated: {{\Carbon\Carbon::parse($today->created_at)->diffForHumans()}}</span>
             <span class="badge badge-success">Last updated by: {{$today->byUser->battletag}}</span>
         </div>
         <div class="item action-buttons">
-            @if(Auth::check() && !\App\Today::alreadyHaveGamemodeToday())
-                <a href="/gamemode" class="btn btn-success"><i class="fa fa-check-circle"></i> Set Today's Arcade</a>
+            @if( Auth::check() )
+                <div class="btn-group">
+                    <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">
+                        <i class="fas fa-magic"></i> Staff actions
+                    </a>
+                    <div class="dropdown-menu">
+                        @if(!\App\Today::alreadyHaveGamemodeToday())
+                            <a class="dropdown-item" href="/gamemode"><i class="fas fa-check-circle"
+                                                                         style="color:green;"></i> Set Today's
+                                Arcade</a>
+                        @else
+                            <form method="POST" id="revertGamemode" action="{{route('gamemode.revert')}}">
+                                {{csrf_field()}}
+                                <a href="javascript:revertTodaysGamemode()" class="dropdown-item"><i
+                                            class="fas fa-times-circle" style="color:red;"></i> Revert submittion</a>
+                            </form>
+                        @endif
+                        <a href="/twitter" class="dropdown-item"><i class="fab fa-twitter" style="color:#1da1f2"></i>
+                            Twitter text</a>
+                    </div>
+                </div>
+
             @endif
-            <a href="javascript:about()" class="btn btn-warning"><i class="fa fa-book"></i> About</a>
-            @if(Auth::check())
-                <a href="/twitter" class="btn btn-warning"><i class="fa fa-twitter"></i> Twitter text</a>
-            @endif
-            <a href="javascript:fader('.arcade', '.api')" class="btn btn-info"><i class="fa fa-gear"></i> Free API</a>
-            <a href="javascript:fader('.arcade', '.downloading')" class="btn btn-info"> <i class="fa fa-bell"></i>
+            <a href="javascript:fader('.arcade', '.api')" class="btn btn-info"><i class="fas fa-cog"></i> Free API</a>
+            <a href="javascript:fader('.arcade', '.downloading')" class="btn btn-info"><i class="fas fa-bullhorn"></i>
                 Notify me</a>
-            <a href="javascript:fader('.arcade', '.contributors')" class="btn btn-info"><i class="fa fa-users"></i>
+            <a href="javascript:fader('.arcade', '.contributors')" class="btn btn-info"><i class="far fa-life-ring"></i>
                 Contributors</a>
         </div>
     </div>
@@ -186,13 +203,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="{{ URL::asset('/js/reset-timer.js') }}"></script>
 <script>
-    function about() {
-        return swal({
-            title: "About",
-            text: "This website has been made by bluedog and maintained by everyone listed under 'contributors'. Special thanks to KVKH for all the contributions and n3tman for the web front-end development. In order to become a contributor and submit today's gamemode, please contact me.",
-            button: "Alright, neat!",
-        });
+
+    @if(Auth::check())
+    function revertTodaysGamemode() {
+        swal({
+            title: "Are you sure?",
+            text: "You are about to revert today\'s gamemode",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    $("#revertGamemode").submit();
+                }
+            });
     }
+
+    @endif
 
     function fader(fadeOut, fadeIn) {
         $(fadeOut).fadeOut(250);
