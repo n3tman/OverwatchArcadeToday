@@ -12,9 +12,10 @@ class Today extends Model
     public static function alreadyHaveGamemodeToday()
     {
         $lastGamemode = Today::orderBy('created_at', 'desc')->first();
+        $lastGamemodeTime = Carbon::parse($lastGamemode->created_at, 'Europe/Amsterdam')->setTimezone('UTC');
         $resetTime = Carbon::now('UTC')->hour(2);
 
-        if ($lastGamemode->created_at > $resetTime) {
+        if ($resetTime->diffInHours($lastGamemodeTime) < 24) {
             return $lastGamemode;
         }
         return false;
