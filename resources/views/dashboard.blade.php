@@ -27,19 +27,19 @@
         <div class="secondary">
             <div class="row">
                 <div class="card">
-                    <span class="card-ribbon">Changes weekly</span>
-                    <img src="{{getTileImageByCode($today->tile_weekly_1->code)}}" class="card-image">
-                    <div class="card-body">
-                        <p class="card-text item">{{$today->tile_weekly_1->players}}</p>
-                        <h5 class="card-title item">{{$today->tile_weekly_1->name}}</h5>
-                    </div>
-                </div>
-                <div class="card">
                     <span class="card-ribbon -secondary">Changes daily</span>
                     <img src="{{getTileImageByCode($today->tile_daily->code)}}" class="card-image">
                     <div class="card-body">
                         <p class="card-text item">{{$today->tile_daily->players}}</p>
                         <h5 class="card-title item">{{$today->tile_daily->name}}</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="card-ribbon">Changes weekly</span>
+                    <img src="{{getTileImageByCode($today->tile_weekly_1->code)}}" class="card-image">
+                    <div class="card-body">
+                        <p class="card-text item">{{$today->tile_weekly_1->players}}</p>
+                        <h5 class="card-title item">{{$today->tile_weekly_1->name}}</h5>
                     </div>
                 </div>
             </div>
