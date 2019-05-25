@@ -48,13 +48,13 @@
     "emoji": "\uD83C\uDFC6⚽"
   },
   {
-    "name": "CTF Ayutthaya",
+    "name": "CTF: Ayutthaya Only",
     "players": "6v6",
     "code": "ctfayutthaya",
     "emoji": "\uD83C\uDDF9\uD83C\uDDED"
   },
   {
-    "name": "CTF Busan",
+    "name": "CTF: Busan",
     "players": "6v6",
     "code": "ctfbusan",
     "emoji": null
@@ -186,7 +186,7 @@
     "emoji": "\uD83E\uDD16"
   },
   {
-    "name": "Yeti Hunt",
+    "name": "Yeti Hunter",
     "players": "5v1",
     "code": "yetihunt",
     "emoji": "\uD83E\uDD69"
@@ -208,5 +208,53 @@
     "players": "8 Player FFA",
     "code": "mirroreddeathmatch",
     "emoji": "\uD83D\uDC80"
+  },
+  {
+    "name": "Capture the Rooster",
+    "players": "6v6",
+    "code": "capturetherooster",
+    "emoji": "\uD83D\uDEA9"
+  },
+  {
+    "name": "Junkenstein Endless",
+    "players": "4 Player Co-op",
+    "code": "junkensteinsendless",
+    "emoji": "\uD83C\uDF83"
+  },
+  {
+    "name": "Uprising (Story)",
+    "players": "4 Player Co-op",
+    "code": "uprisingstory",
+    "emoji": "\uD83E\uDD16"
+  },
+  {
+    "name": "Uprising (All Heroes)",
+    "players": "4 Player Co-op",
+    "code": "uprisingallheroes",
+    "emoji": "\uD83E\uDD16"
+  },
+  {
+    "name": "Retribution (Story)",
+    "players": "4 Player Co-op",
+    "code": "retributionstory",
+    "emoji": "\uD83D\uDD75️\u200D♀️"
+  },
+  {
+    "name": "Retribution (All Heroes)",
+    "players": "4 Player Co-op",
+    "code": "retributionallheroes",
+    "emoji": "\uD83D\uDD75️\u200D♀️"
+  },
+  {
+    "name": "Storm Rising (Story)",
+    "players": "4 Player Co-op",
+    "code": "stormstory",
+    "emoji": null
+  },
+  {
+    "name": "Storm Rising (All Heroes)",
+    "players": "4 Player Co-op",
+    "code": "stormallheroes",
+    "emoji": null
   }
 ]
